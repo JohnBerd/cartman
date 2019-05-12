@@ -1,0 +1,38 @@
+var $j = jQuery.noConflict();
+// $j is now an alias to the jQuery function; creating the new alias is optional.
+
+var tags = [];
+
+
+function buildList(login) {
+	var idx = 0;
+	var sufix;
+	var mailAuto = "";
+	
+	for ( idx = 0; idx < sufixes.length; idx++ ) {
+	  
+	   sufix = sufixes[idx];
+	   mailAuto = login + "@" + sufix;
+	   tags[idx] = mailAuto;
+	}
+}
+
+function mailAutoComplete() {
+	var mail = document.getElementById("loginWassup").value;
+	var indexOfAt = mail.indexOf('@');
+
+	if (indexOfAt != -1) {
+		var login = mail.substring(0, indexOfAt);
+		buildList(login);
+	}
+}
+
+$j( "#loginWassup" ).autocomplete({
+  source: function( request, response ) {
+			mailAutoComplete();
+          var matcher = new RegExp( "^" + $j.ui.autocomplete.escapeRegex( request.term ), "i" );
+          response( $j.grep( tags, function( item ){
+              return matcher.test( item );
+          }) );
+      }
+});

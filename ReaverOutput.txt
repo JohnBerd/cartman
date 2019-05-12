@@ -1,0 +1,25 @@
+
+Reaver v1.5.2 WiFi Protected Setup Attack Tool
+Copyright (c) 2011, Tactical Network Solutions, Craig Heffner <cheffner@tacnetsol.com>
+mod by t6_x <t6_x@hotmail.com> & DataHead & Soxrok2212
+
+[+] Switching wlan0 to channel 1
+[+] Waiting for beacon from 44:CE:7D:9D:1C:1C
+[!] WARNING: Failed to associate with 44:CE:7D:9D:1C:1C (ESSID: SFR_1C18)
+[!] WARNING: Failed to associate with 44:CE:7D:9D:1C:1C (ESSID: SFR_1C18)
+[!] WARNING: Failed to associate with 44:CE:7D:9D:1C:1C (ESSID: SFR_1C18)
+[!] WARNING: Failed to associate with 44:CE:7D:9D:1C:1C (ESSID: SFR_1C18)
+[!] WARNING: Failed to associate with 44:CE:7D:9D:1C:1C (ESSID: SFR_1C18)
+[!] WARNING: Failed to associate with 44:CE:7D:9D:1C:1C (ESSID: SFR_1C18)
+[!] WARNING: Failed to associate with 44:CE:7D:9D:1C:1C (ESSID: SFR_1C18)
+[!] WARNING: Failed to associate with 44:CE:7D:9D:1C:1C (ESSID: SFR_1C18)
+[!] WARNING: Failed to associate with 44:CE:7D:9D:1C:1C (ESSID: SFR_1C18)
+[!] WARNING: Failed to associate with 44:CE:7D:9D:1C:1C (ESSID: SFR_1C18)
+[!] WARNING: Failed to associate with 44:CE:7D:9D:1C:1C (ESSID: SFR_1C18)
+[!] WARNING: Failed to associate with 44:CE:7D:9D:1C:1C (ESSID: SFR_1C18)
+[!] WARNING: Failed to associate with 44:CE:7D:9D:1C:1C (ESSID: SFR_1C18)
+[!] WARNING: Failed to associate with 44:CE:7D:9D:1C:1C (ESSID: SFR_1C18)
+[!] WARNING: Failed to associate with 44:CE:7D:9D:1C:1C (ESSID: SFR_1C18)
+[!] WARNING: Failed to associate with 44:CE:7D:9D:1C:1C (ESSID: SFR_1C18)
+
+[+] Nothing done, nothing to save.

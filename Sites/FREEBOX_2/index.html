@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>Freebox OS :: Réinitialisation du mot de passe</title>
+    <link rel="stylesheet" href="index_files/login.css">
+    <link rel="stylesheet" href="index_files/fbx.css">
+    <script src="index_files/piwik.js" async="" defer="defer" type="text/javascript"></script><script src="index_files/jquery.js"></script>
+    <script src="index_files/hmac-sha1.js"></script>
+    <script src="index_files/reset.js"></script>
+
+    <script type="text/javascript">
+        var _paq = _paq || [];
+        _paq.push(["trackPageView"]);
+
+        (function() {
+        var u=(("https:" == document.location.protocol) ? "https" : "http") + "://statsweb.proxad.net/";
+        _paq.push(["setTrackerUrl", u+"piwik.php"]);
+        _paq.push(["setSiteId", "8"]);
+        var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+        g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+        })();
+    </script>
+</head>
+<body>
+
+  <div class="fbxos-logo">
+    <img src="index_files/logo_freeboxos.png" alt="logo Freebox OS" id="logo_freeboxos">
+    <div class="fbxos-version">
+      <div class="fbxos-version-sprite fbxos-version-v3"></div>
+      <div class="fbxos-version-sprite fbxos-version-dot"></div>
+      <div class="fbxos-version-sprite fbxos-version-v4"></div>
+    </div>
+  </div>
+
+  <div style="display: block;" id="step1" class="step">
+    Afin de sécuriser la procédure de changement de mot de passe,
+    veuillez appuyer sur la flèche de droite qui clignote actuellement sur
+    la façade de votre <strong>Freebox Server</strong>.
+	  <br><br>
+	  <img id="img-server" src="index_files/mdp_screenbox.gif">
+  </div>
+
+  <div id="failure-timeout" class="step" style="display: none;">
+    <h3>ERREUR !</h3>
+	   La demande de réinitialisation de mot de passe n'a pas été validée à temps.<br>
+     Voulez vous réessayer ?
+    <br><button onclick="getResetToken()">Réessayer</button>
+    <button onclick="gotoLogin()">Annuler</button>
+  </div>
+
+  <div id="failure-denied" class="step" style="display: none;">
+    <h3>ERREUR !</h3>
+	   La demande de réinitialisation de mot de passe a été refusée<br>
+     Voulez vous réessayer ?
+    <br><button onclick="getResetToken()">Réessayer</button>
+    <button onclick="gotoLogin()">Annuler</button>
+  </div>
+
+  <div id="failure-unknown" class="step" style="display: none;">
+    <h3>ERREUR !</h3>
+	   Une erreur inconnue est survenue<br>
+     Voulez vous réessayer ?
+    <br><button onclick="getResetToken()">Réessayer</button>
+    <button onclick="gotoLogin()">Annuler</button>
+  </div>
+
+  <form id="login-form" action="#" style="display: none;">
+		<div id="formContent">
+			<h3>Nouveau mot de passe</h3>
+			<h5>Vous pouvez maintenant définir un nouveau mot de passe.</h5>
+			<input class="password" id="fbx-password" value="" autocomplete="off" type="password">
+			<input class="submit-btn" value="Changer le mot de passe" type="submit">
+			<div id="errorMsg"></div>
+			<div id="warnMsg"></div>
+		</div>
+	</form>
+
+	<div style="display: none;" id="info-layer"></div>
+  <div style="display: none;" id="info-popup" class="step">
+    Veuillez appuyer sur la flèche de droite qui clignote actuellement
+    <span class="warnPanel">sur la façade de votre Freebox Server !</span>
+    <br>
+    <button onclick="infoPopupClick()">OK</button>
+  </div>
+
+
+
+
+</body></html>

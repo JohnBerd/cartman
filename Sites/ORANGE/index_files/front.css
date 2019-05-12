@@ -1,0 +1,1025 @@
+﻿* {
+	margin: 0;
+	border: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif
+}
+
+BODY {
+	text-align: left;
+	background: #F7F7F7
+}
+A, A:link, A:visited, A:hover, A:active {
+	text-decoration: none
+}
+	A:hover, A:focus {
+		text-decoration: underline 
+	}
+B, STRONG { font-weight: bold }
+.sep { float: none; clear: both }
+.cible { float: left }
+.gris { color: #666666 }
+.masquage_accessible { position: absolute !important; width: 1px; margin-top: -1000px; margin-left: -1000px; padding: 100px; overflow: hidden; color: #eee; }
+#mwf_opak {
+	display: none;
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	filter: alpha(opacity=80); -moz-opacity:0.80; opacity: 0.80
+}
+#mwf_infoRecoAuto {
+	display: none;
+	position: fixed;
+	z-index: 1000;
+	width: 360px;
+	height: 250px;
+	left: 50%;
+	top: 40%;
+	margin-left: -180px;
+	margin-top: -125px;
+	background-color: #FFF;
+	padding: 25px 40px;
+	color: #434343
+}
+.titreBleu {
+	color: #527EDB;
+	font-size: 16px
+}
+.titreNoir {
+	color: #000;
+	font-size: 20px
+}
+	.titreBleu IMG, .titreNoir IMG {
+		vertical-align: sub;
+		margin-right: 7px
+	}
+
+#mwf_header {
+	position: relative;
+	background: linear-gradient(white, #F7F7F7);
+	height: 94px;
+	min-width: 645px
+}
+	#mwf_headerCnt {
+		position: relative;
+		height: 100%;
+		max-width: 1200px;
+		margin: 0 auto
+	}
+	#mwf_logo {
+		position: absolute;
+		width: 53px;
+		height: 53px;
+		background: transparent url(../img/logo_orange.gif) no-repeat 0 0;
+		left: 20px;
+		top: 20px
+	}
+	#mwf_titre {
+		position: absolute;
+		width: 600px;
+		height: 47px;
+		left: 93px;
+		top: 25px;
+		font-size: 30px;
+		font-weight: normal
+	}
+	#H1Content {
+		bottom: 0;
+		position: absolute;
+		line-height: 25px
+	}
+	#mwf_options {
+		position: absolute;
+		width: auto;
+		height: 30px;
+		right: 10px;
+		top: 58px
+	}
+		.mwf_option, .mwf_optionSurf {
+			float: left;
+			margin-left: 35px;
+			font: 14px;
+			width: 120px;
+			cursor: pointer
+		}
+		.mwf_option_assistance {
+			float: left;
+			margin-left: 35px;
+			font: 14px;
+			width: 130px;
+			cursor: pointer
+		}
+		.mwf_optionSurf {
+			float: none;
+			width: auto;
+			margin-left: 0
+		}
+			.mwf_option A, .mwf_optionSurf A, .mwf_option_assistance A {
+				color: #000
+			}
+			.mwf_option IMG {
+				vertical-align: middle;
+				margin-right: 5px
+			}
+
+#mwf_corps {
+	position: relative;
+	max-width: 1200px;
+	margin-top: 10px;
+	margin: 0 auto
+}
+		#welcome, #welcome2 {
+			font-size: 18px;
+			color: #666;
+			margin-bottom: 10px
+		}
+		#mwf_langs, .mwf_langs {
+			margin-top: 20px;
+			padding: 13px 10px;
+			background: #EEE;
+			border-radius: 5px;
+			font-size: 15px;
+			color: #232323;
+			cursor: pointer
+		}
+		#mwf_col1, #mwf_col2, #mwf_col3 {
+			position: relative;
+		}
+		#mwf_col1 {
+			position: absolute;
+			width: 206px;
+			padding-left: 20px;
+			z-index: 200;
+		}
+		.listSys { position: absolute; left: 0; top: 0; width: 100%; height: 100%; filter: alpha(opacity=0); -moz-opacity: 0.0; opacity: 0.0 }
+			.droplist {
+				position: relative;
+				margin-top: 5px;
+				padding: 0 6px;
+				background: white url(../img/chv_liste.png) no-repeat right 0px;
+				border-radius: 5px;
+				border: 1px solid #CCC;
+				font-size: 13px;
+				color: #666;
+				line-height: 30px;
+				cursor: pointer
+			}
+				.droplist:focus {
+					border-color: #333;
+					outline: none
+				}
+				.droplist UL {
+					display: none;
+					position: absolute;
+					list-style: none;
+					overflow: auto;
+					width: 100%;
+					min-height:90px;
+					max-height:120px;
+					z-index: 100;
+					border: 1px solid #333;
+					border-top: none;
+					background: #FFF;
+					left: -1px;
+					top: 28px
+				}
+					.droplist LI:hover {
+						background: #DDD
+					}
+					.droplist LI:focus, .droplist LI A:focus {
+						background: #DDD;
+						outline: none
+					}
+					.droplist LI:blur {
+						background: #FFF
+					}
+					.droplist A {
+						display: block;
+						font-size: 13px;
+						color: #666;
+						line-height: 30px;
+						margin-left: 6px;
+						text-decoration: none !important
+					}
+					.droplist IMG {
+						vertical-align: middle !important
+					}
+					.on {
+						background: #EDEDED
+					}
+						.on A {
+							color: #000
+						}
+		#mwf_col2 {
+			position: relative;
+			float: left;
+			top: 0;
+			width: 700px;
+			width: -webkit-calc(100% - 466px);
+			width: -moz-calc(100% - 466px);
+			width: calc(100% - 466px);
+			min-width: 399px;
+			min-height: 380px;
+			padding: 5px 210px 5px 246px;
+			font-size: 20px
+		}
+			#mwf_col2 H2 {
+				font-size: 20px;
+				font-weight: normal
+			}
+			#mwf_blocCo {
+				position: relative;
+				border-radius: 5px;
+				border: 1px solid #E6E6E6;
+				background: white;
+				padding: 15px 30px;
+				width: 495px
+			}
+				#mwf_blocCo .titre {
+					font-size: 15px;
+					font-weight: bold;
+					color: #232323
+				}
+				#btRefresh {
+					position: absolute;
+					top: 21px;
+					right: 20px
+				}
+					#btRefresh A {
+						color: #666;
+						font-size: 13px;
+						text-decoration: underline
+					}
+			#chv_aide1, #chv_aide2 { display: none; position: absolute; right: -1px; top: 40px}
+			#chv_aide2 { top: 25px}
+			.mwf_line {
+				position: relative;
+				border-radius: 5px;
+				border: 1px solid #ccc;
+				background: white url(../img/chv_acc_b.png) no-repeat 0 5px;
+				padding: 0 10px 0 30px;
+				margin-top: 10px
+			}
+			.mwf_choix {
+				height: 28px;
+				margin-top: 11px;
+				font-size: 15px;
+				font-weight: normal;
+				cursor: pointer
+			}
+			.mwf_choix A, .mwf_choix A:link, .mwf_choix A:visited, .mwf_choix A:active {
+				display: block;
+				height: 100%;
+				font-size: 15px;
+				font-weight: normal;
+				text-decoration: none;
+				color: #000
+			}
+			.mwf_choix A:hover {
+				text-decoration: underline
+			}
+			.mwf_choix A:focus {
+				font-weight: bold;
+				outline: none
+			}
+
+			.mwf_form {
+				display: none;
+				position: relative;
+				margin-left: -10px;
+				font-size: 13px
+			}
+				.mwf_miniBloc, .mwf_miniBloc_gch, .mwf_miniBloc_drt {
+					float: left;
+					margin-top: 20px;
+					font-size: 13px
+				}
+				.mwf_miniBloc_gch {
+					width: 53%
+				}
+				.mwf_miniBloc_drt {
+					width: 47%
+				}
+				.mwf_form .mwf_coche {
+					background: transparent url(../img/coche_off.gif) no-repeat 0 0;
+					font-size: 13px;
+					padding-left: 25px;
+					min-height: 30px;
+					cursor: default
+				}
+				.mwf_form .mwf_coche:focus {
+					background: transparent url(../img/coche_focus_off.gif) no-repeat 0 0;
+					outline: none
+				}
+				.mwf_form .mwf_coche.on {
+					background: transparent url(../img/coche_on.gif) no-repeat 0 0
+				}
+					.mwf_form .mwf_coche A, LABEL A {
+						font-size: 13px;
+						text-decoration: underline !important;
+						color: #000
+					}
+				INPUT {
+					display: block;
+					border-radius: 5px;
+					border: 1px solid #CCC;
+					height: 28px;
+					padding-left: 7px;
+					line-height: 28px;
+					font-size: 13px;
+					width: 90%
+				}
+					INPUT:focus {
+						border-color: #333;
+						outline: none
+					}
+				INPUT.case {
+					display: inline;
+					float: left;
+					border-radius: 5px;
+					border: none;
+					height: auto;
+					padding-left: auto;
+					line-height: 28px;
+					font-size: 13px;
+					width: auto;
+					margin-right: 10px;
+					vertical-align: sub
+				}
+				.erreur {
+					background: transparent url(../img/err.gif) no-repeat 1px 5px;
+					font-size: 13px;
+					color: #C00;
+					padding: 7px 30px
+				}
+				#contentOp { padding: 10px 0 10px 10px }
+					#contentOp .titreBleu { margin-top: 0 }
+				#identOp {
+					position: relative
+				}
+					#identOp #maskOp {
+						position: absolute; width: 98%; height: 100%; background: #FFF; filter: alpha(opacity=50); -moz-opacity:0.50; opacity: 0.50
+					}
+				#infosOp {
+					display: none
+				}
+			#mwf_line3w, #mwf_lineP1 { display: none; background-image: none; font-size: 14px; color: #232323; margin-bottom: -16px; border-bottom: 0 }
+			#mwf_lineP1 { display: block; }
+			#mwf_lineP1o { background-image: none; font-size: 14px; color: #232323 }
+				#mwf_line3w IMG, #mwf_lineP1 IMG, #mwf_lineP1o IMG { float: right; margin: 20px 20px 0 10px }
+			#infoOp { display: none }
+		#mwf_col3 {
+			width: 200px
+		}
+		#mwf_col3, #mwf_col3 .lien, .mwf_miniBloc .lien2, #aide1H .lien, #aide2H .lien, #aide1d .lien, #aide2d .lien {
+			font-size: 12px;
+			color: #434343
+		}
+			#mwf_col3 .lien, .mwf_blocInt .lien, .mwf_miniBloc .lien2, #aide1H .lien, #aide2H .lien, #aide1d .lien, #aide2d .lien {
+				display: block;
+				background: transparent url(../img/chv_drt.gif) no-repeat -1px 3px;
+				padding-left: 15px;
+				margin: 10px 0;
+				color: #000
+			}
+			.lien.g { background-image: url(../img/chv_drt_gr.gif) !important }
+			HR {
+				float: none;
+				clear: both;
+				height: 2px;
+				border-top: 1px solid #CCC;
+				margin: 5px 0
+			}
+			#aide1, #aide2, #aide1H, #aide2H { display: none }
+			#aide1, #aide2 { margin-top: 40px }
+			#aide1d, #aide2d { display: none; position: absolute; width: 200px; right: 0; top: 30px; font-size: 12px; color: #434343 }
+.mwf_bt_orange {
+	display: inline-block;
+	border-radius: 5px;
+	background: #F60;
+	font-size: 16px;
+	height: 36px;
+	width: auto;
+	border: 0;
+	font-weight: bold;
+	line-height: 36px;
+	padding: 0 20px;
+	color: #FFF;
+	cursor: pointer
+}
+	INPUT.mwf_bt_orange:focus,INPUT.mwf_bt_orange:hover  {
+		background: #C15800;
+		outline: none
+	}
+.mwf_bt_gris {
+	display: inline-block;
+	margin-top: 10px;
+	border-radius: 5px;
+	background: #666;
+	font-size: 13px;
+	font-weight: bold;
+	line-height: 25px;
+	padding: 0 20px;
+	width: auto;
+	border: 0;
+	color: #FFF;
+	cursor: pointer
+}
+	INPUT.mwf_bt_gris:focus,INPUT.mwf_bt_gris:hover  {
+		background: #4C4C4C;
+		outline: none
+	}
+.mwf_blocInt {
+	border-left: 1px solid #CCC;
+	margin-left: 10px;
+	padding-left: 10px;
+	font-size: 13px
+}
+	.mwf_blocInt DIV {
+		font-size: 20px;
+		margin: 10px 0
+	}
+.mwf_blocIntH {
+	border-top: 1px solid #CCC;
+	margin-top: -1px;
+	padding-top: 10px;
+	font-size: 13px
+}
+.mwf_blocIntB {
+	border-bottom: 1px solid #CCC;
+	margin-bottom: -1px;
+	padding-bottom: 10px;
+	font-size: 13px
+}
+	
+.op {
+}
+
+.bulle, .bulleH {
+	background: #E6E6E6;
+	border-top-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	padding: 15px;
+	margin-left: 15px
+}
+.bulleH {
+	font-size: 12px;
+	margin-left: 0
+}
+
+#passWifi {
+	position: absolute;
+	width: 200px;
+	right: 0;
+	top: 121px
+}
+
+#mwf_footer {
+	float: none;
+	clear: both;
+	position: relative;
+	margin-top: 140px;
+	background: #232323;
+	height: 36px;
+	text-align: center;
+	color: #FFF;
+	line-height: 34px;
+	font-size: 13px
+}
+	#mwf_footer A {
+		border-left: 1px solid #FFF;
+		margin-left: 20px;
+		padding-left: 20px;
+		font-size: 13px;
+		color: #FFF
+	}
+	
+/***** [ écrans étroits ] *****/
+@media (max-width: 864px) {
+		#mwf_options { width: 300px; top: 17px }
+			#mwf_option1, #mwf_option2 { float: right; height: 35px }
+	#mwf_logo { left: 10px }
+	#mwf_titre { left: 83px }
+	#mwf_col1 { padding-left: 10px }
+	#mwf_col2 { width: 500px; width: -webkit-calc(100% - 256px); width: -moz-calc(100% - 256px); width: calc(100% - 256px); padding: 5px 0 5px 236px }
+		.mwf_miniBloc_drt { width: 40% }
+		#mwf_operators {background-position: 99% 0 }
+		#mwf_line3w { display: block }
+		#mwf_line3 { border-top: 1px solid white }
+			.mwf_blocIntB {margin-right: 30px }
+		#chv_aide1, #aide1d, #chv_aide2, #aide2d, #passWifi { display: none }
+		#mwf_col3 {	display: none }
+}
+@media (max-width: 645px) {
+	#mwf_col2 { width: 399px; padding: 5px 0 5px 236px/*; position: absolute; left: 216px*/ }
+}
+
+/***** [ Mobile - low res ] *****/
+@media handheld, only screen and (max-width: 600px), only screen and (max-device-width: 600px) {
+	#mwf_col2 {	width: 355px }
+		.mwf_miniBloc_gch { width: 145px }
+		.mwf_miniBloc_drt { width: 170px }
+	#mwf_col3 {	display: none }
+}
+
+::-webkit-scrollbar {
+     -webkit-appearance: none;
+     width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+
+/*////////////////////////////////////////////////////////////////
+//refresh-desktop
+////////////////////////////////////////////////////////////////*/
+
+/*
+ *
+ *	Pack 1
+ *
+ */
+
+
+/* texte courant : noir par défaut */
+BODY {
+	color: #000;
+}
+
+
+/* bloc not French ? */
+#mwf_langs, .mwf_langs {
+	border-radius: 0px;
+}
+
+
+/* cadre
+	- coins carré
+	- agrandir en hauteur +5px haut / bas
+	>> repositionnement du chevron v / ^ en conséquence
+	*/
+.mwf_line {
+	border-radius: 0px;
+	padding-top: 5px;
+    padding-bottom: 5px;
+    background: white url(../img/chv_acc_b.png) no-repeat 0 10px; /* 10px au lieu de 5px */
+}
+
+
+/* augmenter l'espace vertical entre les 2 groupes pour atteindre 70px (titre compris)
+	TODO : sur le 2e H2 +++ margin-top: 14px; */
+/* Remarque prestataire : on passe plutôt par .section_sep et on se passe du <br /> du code HTML */
+#mwf_col2 .titre-2-ng {
+	margin-top: 14px;
+}
+
+
+/* passer les titres en bold
+	- titre de page
+	- titres secondaires H2
+	- titre de chaque section
+	- (i) pratique
+	- Pass Wifi d'Orange (col. droite)
+	- not French ? */
+#H1Content, #mwf_col2 H2 {
+	font-weight: bold;
+}
+.mwf_choix A, .mwf_choix A:link, .mwf_choix A:visited, .mwf_choix A:active {
+	font-weight: bold;
+    font-size: 16px;
+}
+.mwf_blocInt DIV {
+    font-weight: bold;
+}
+#mwf_langs > div, .mwf_langs > div {
+	font-weight: bold;
+}
+
+/* passer tous les liens en bold */
+#mwf_col3 .lien, .mwf_blocInt .lien, .mwf_miniBloc .lien2, #aide1H .lien, #aide2H .lien, #aide1d .lien, #aide2d .lien {
+	font-weight: bold;
+}
+
+
+/* augmenter le corps de texte */
+#aide1H, #aide2H, #aide1d, #aide2d, .bulle, .bulleH {
+	font-size: 13px;
+}
+#mwf_col3, #mwf_col3 .lien, .mwf_miniBloc .lien2, #aide1H .lien, #aide2H .lien, #aide1d .lien, #aide2d .lien {
+	font-size: 13px;
+}
+
+
+/* bouton Orange
+	- hauteur : 40px
+	- padding gauche/droite  : 20px 
+	- coins carré
+	- OFF : texte blanc / fond Orange
+	- HOVER : texte blanc / fond noir
+	- ACTIVE : texte blanc / fond Orange
+	 */ 
+.mwf_bt_orange {
+	font-size: 16px;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-radius: 0px;
+	background-color: #f16e00;
+}
+.mwf_bt_orange:focus, .mwf_bt_orange:hover {
+	background-color: #000;
+	text-decoration: none;
+}
+.mwf_bt_orange:active {
+	border-radius: 0px;
+	background-color: #f16e00;
+	text-decoration: none;
+}
+
+/* bouton gris => devient filaire 2px / transparent
+	- hauteur : 40px
+	- padding gauche/droite  : 20px 
+	- coins carré
+	- border 2px
+	- OFF : texte noir / fond transparent / bordure noire
+	- HOVER : texte blanc / fond noir / bordure noire
+	- ACTIVE : texte blanc / fond orange
+	
+	Remarque presta :
+	- pas uniquement input
+	- penser à supprimer les styles dans le code HTML
+	 */ 
+
+INPUT.mwf_bt_gris, A.mwf_bt_gris {
+	font-size: 16px;
+	height: 40px;
+	/* line-height: 40px; */ /* presta : impact a voir sur template orange */
+	border-radius: 0px;
+	border: 2px solid #000;
+	background-color: transparent;
+	color: #000;
+}
+
+A.mwf_bt_gris {
+	line-height: 40px;
+}
+
+INPUT.mwf_bt_gris:focus, INPUT.mwf_bt_gris:hover , A.mwf_bt_gris:focus, A.mwf_bt_gris:hover{
+	color: #fff;
+	background-color: #000;	
+}
+A.mwf_bt_gris:focus, A.mwf_bt_gris:hover {
+	text-decoration: none 
+}
+
+INPUT.mwf_bt_gris:active, A.mwf_bt_gris:active {
+	color: #fff;
+	border-color: #f16e00;
+	background-color: #f16e00;		
+}
+
+
+
+
+/*
+ * Formulaire
+ *
+ *	- modification du corps de texte à 14px
+ */
+.mwf_form {
+	font-size: 14px;
+}
+
+/* Label
+	- gras
+	- 14px*/
+label {
+	font-weight: bold;
+	font-size: 14px;
+}
+
+/* Input
+	- typo : 14px
+	- bordure : 2px
+	- coins carrés
+	- hauteur : 35px bordure comprise */
+INPUT, INPUT[type="text"], INPUT[type="password"], INPUT[type="email"] {
+	font-size: 14px;
+	height: 31px;	/* ce qui donne 35px, bordures 2px comprises */
+	line-height: 31px;
+	border-radius: 0px;
+	border-width: 2px;	
+}
+
+/*  augmenter l'espace vertical entre le label et l'input de 5px */
+INPUT[type="text"], INPUT[type="password"], INPUT[type="email"] {
+	margin-top: 5px;
+}
+
+
+/* Sélecteur, liste déroulante
+	- corps de texte : 14px
+	- bordure : 2px
+	- coins carrés
+	- hauteur : 35px bordure comprise
+	*/
+.droplist {
+	font-size: 14px;
+	height: 31px;
+	line-height: 31px;
+	border-radius: 0px;
+	border-width: 2px;		
+}
+
+/* impacts sur le positionnement de la liste déroulante
+	bordure - modifier l'épaisseur du cadre de 1px à 2px
+	*/
+.droplist UL {
+	top: 31px;
+	left: -2px;
+	border-width: 2px;
+	font-weight: bold; /* unniformisation liste deroulante langues */
+}
+
+/* texte de couleur : noir */
+.droplist A {
+	color: #000;
+}
+
+/* modifier l'état hover+focus : texte blanc sur fond noir */
+.droplist LI:hover {
+	background: #000
+}
+.droplist LI:hover A {
+	color: #fff;
+}
+.droplist LI:focus, .droplist LI A:focus {
+	color: #fff;
+	background: #000;
+	outline: none
+}
+.on {
+	background-color: #000;
+}
+.on A {
+	color: #fff;
+}
+
+
+/* passer les titres bleu en noir / gras */
+.titreBleu {
+	color: #000;
+	font-weight: bold;
+}
+
+
+/* impact - réaligner verticalement les coches et blocs vers le bas */
+#passWifi IMG#cibleOp {
+	margin-top: 117px !important; 
+}
+
+
+
+
+
+/*
+ *
+ *	Pack 2 - Couleurs et suppression des bordures
+ *
+ */
+
+/* Modification de la couleur de fond de page */
+body {
+	background-color: #eee;
+}
+
+/* Suppression du dégradé dans le header
+	- passer la couleur identique au fond de page */
+#mwf_header {
+	background: #eee;
+}
+
+/* Blocs col. gauche
+	- modification des couleurs de fond */
+#mwf_langs, .mwf_langs {
+	background-color: #E6E6E6;
+}
+
+/* suppression des bordures externes sur tous les blocs */
+.mwf_line {
+	border: none;
+}
+
+/* impacts : nettoyer les images découpées pour supprimer l'ancienne couleur de fond
+	=> les rendre transparente ou passer en #eee */
+
+
+/* Bulles
+	- modification des couleurs de fond et couleurs de texte
+	- idem pour le lien inclus dans la bulle */
+.bulle, .bulleH {
+	color: #fff;
+	background-color: #757575;
+}
+.bulle A , .bulleH A {
+	color: #fff !important ;
+}
+
+/* Footer
+	- fond noir */
+#mwf_footer {
+	background: #000;
+}
+
+
+/*
+ Ajout prestataire
+*/
+/* Séparateurs de sections pour espacer de 70px
+en considérant que la hauteur du titre de section est de 24px et le margin-top du titre de l'onglet suivant est de 10px */
+.section_sep {
+	margin-top: 36px;
+}
+
+/*
+   message d'erreur à mettre à la même taille que le texte du formulaire
+*/
+.erreur {
+	font-size: 14px;
+	outline: none;
+}
+
+/*
+   évite d'afficher une bande blanche en-dessous de l'onglet client d'un autre opérateur une fois celui-ci ouvert
+*/
+#identOp #maskOp {
+	width: 100%;
+	height: 95%;
+}
+
+/*
+   Le scroll augmente la largeur de la liste => on diminue la largeur à 96%
+   Note : finalement inutile car ul avait pour classe droplist ce qui provoquait un pb de cohérence
+   sur la hauteur et la largeur
+   <ul id="operatList" class="list" style="display: block;"><li id="operator9"><a tabindex="123" onclick="loadOperatorPagePartner('9', 'Aicent partners')" href="javascript:void(0)">Aicent partners</a></li><li id="operator6"><a tabindex="124" onclick="loadOperatorPagePartner('6', 'BT Openzone')" href="javascript:void(0)">BT Openzone</a></li><li id="operator19"><a tabindex="125" onclick="loadOperatorPagePartner('19', 'Boingo')" href="javascript:void(0)">Boingo</a></li><li id="operator1"><a tabindex="126" onclick="loadOperatorPagePartner('1', 'Bouygues Telecom')" href="javascript:void(0)">Bouygues Telecom</a></li><li id="operator38"><a tabindex="127" onclick="loadOperatorPagePartner('38', 'CMHK')" href="javascript:void(0)">CMHK</a></li><li id="operator28"><a tabindex="128" onclick="loadOperatorPagePartner('28', 'Cegetel')" href="javascript:void(0)">Cegetel</a></li><li id="operator42"><a tabindex="129" onclick="loadOperatorPagePartner('42', 'China Telecom')" href="javascript:void(0)">China Telecom</a></li><li id="operator10"><a tabindex="130" onclick="loadOperatorPagePartner('10', 'China Telecom Broker')" href="javascript:void(0)">China Telecom Broker</a></li><li id="operator29"><a tabindex="131" onclick="loadOperatorPagePartner('29', 'Coordinatech')" href="javascript:void(0)">Coordinatech</a></li><li id="operator22"><a tabindex="132" onclick="loadOperatorPagePartner('22', 'Golden Telecom')" href="javascript:void(0)">Golden Telecom</a></li><li id="operator30"><a tabindex="133" onclick="loadOperatorPagePartner('30', 'IPASS')" href="javascript:void(0)">IPASS</a></li><li id="operator12"><a tabindex="134" onclick="loadOperatorPagePartner('12', 'KT')" href="javascript:void(0)">KT</a></li><li id="operator2"><a tabindex="135" onclick="loadOperatorPagePartner('2', 'KUBI')" href="javascript:void(0)">KUBI</a></li><li id="operator39"><a tabindex="136" onclick="loadOperatorPagePartner('39', 'M800')" href="javascript:void(0)">M800</a></li><li id="operator31"><a tabindex="137" onclick="loadOperatorPagePartner('31', 'Mobistar')" href="javascript:void(0)">Mobistar</a></li><li id="operator24"><a tabindex="138" onclick="loadOperatorPagePartner('24', 'Monaco Telecom')" href="javascript:void(0)">Monaco Telecom</a></li><li id="operator26"><a tabindex="139" onclick="loadOperatorPagePartner('26', 'NordNet')" href="javascript:void(0)">NordNet</a></li><li id="operator18"><a tabindex="140" onclick="loadOperatorPagePartner('18', 'Optimus')" href="javascript:void(0)">Optimus</a></li><li id="operator32"><a tabindex="141" onclick="loadOperatorPagePartner('32', 'Orange Business Service')" href="javascript:void(0)">Orange Business Service</a></li><li id="operator0"><a tabindex="142" onclick="loadOperatorPagePartner('0', 'Orange France')" href="javascript:void(0)">Orange France</a></li><li id="operator25"><a tabindex="143" onclick="loadOperatorPagePartner('25', 'Orange Pologne')" href="javascript:void(0)">Orange Pologne</a></li><li id="operator21"><a tabindex="144" onclick="loadOperatorPagePartner('21', 'Orange Switzerland')" href="javascript:void(0)">Orange Switzerland</a></li><li id="operator8"><a tabindex="145" onclick="loadOperatorPagePartner('8', 'Orange UK')" href="javascript:void(0)">Orange UK</a></li><li id="operator3"><a tabindex="146" onclick="loadOperatorPagePartner('3', 'SFR')" href="javascript:void(0)">SFR</a></li><li id="operator4"><a tabindex="147" onclick="loadOperatorPagePartner('4', 'Sonera Homerun')" href="javascript:void(0)">Sonera Homerun</a></li><li id="operator20"><a tabindex="148" onclick="loadOperatorPagePartner('20', 'Swisscom')" href="javascript:void(0)">Swisscom</a></li><li id="operator15"><a tabindex="149" onclick="loadOperatorPagePartner('15', 'T-Com Germany')" href="javascript:void(0)">T-Com Germany</a></li><li id="operator14"><a tabindex="150" onclick="loadOperatorPagePartner('14', 'T-Mobile Austria')" href="javascript:void(0)">T-Mobile Austria</a></li><li id="operator13"><a tabindex="151" onclick="loadOperatorPagePartner('13', 'T-Mobile Czech Republic')" href="javascript:void(0)">T-Mobile Czech Republic</a></li><li id="operator16"><a tabindex="152" onclick="loadOperatorPagePartner('16', 'T-Mobile Germany')" href="javascript:void(0)">T-Mobile Germany</a></li><li id="operator34"><a tabindex="153" onclick="loadOperatorPagePartner('34', 'T-Mobile Hungary')" href="javascript:void(0)">T-Mobile Hungary</a></li><li id="operator35"><a tabindex="154" onclick="loadOperatorPagePartner('35', 'T-Mobile NL')" href="javascript:void(0)">T-Mobile NL</a></li><li id="operator36"><a tabindex="155" onclick="loadOperatorPagePartner('36', 'T-Mobile UK')" href="javascript:void(0)">T-Mobile UK</a></li><li id="operator11"><a tabindex="156" onclick="loadOperatorPagePartner('11', 'T-Mobile US')" href="javascript:void(0)">T-Mobile US</a></li><li id="operator17"><a tabindex="157" onclick="loadOperatorPagePartner('17', 'T-Online Germany')" href="javascript:void(0)">T-Online Germany</a></li><li id="operator23"><a tabindex="158" onclick="loadOperatorPagePartner('23', 'TATA Indicom')" href="javascript:void(0)">TATA Indicom</a></li><li id="operator33"><a tabindex="159" onclick="loadOperatorPagePartner('33', 'Telecom Italia')" href="javascript:void(0)">Telecom Italia</a></li><li id="operator5"><a tabindex="160" onclick="loadOperatorPagePartner('5', 'Telia Homerun')" href="javascript:void(0)">Telia Homerun</a></li><li id="operator37"><a tabindex="161" onclick="loadOperatorPagePartner('37', 'Voxmobile')" href="javascript:void(0)">Voxmobile</a></li><li id="operator7"><a tabindex="162" onclick="loadOperatorPagePartner('7', 'Weroam')" href="javascript:void(0)">Weroam</a></li><li id="operator999"><a tabindex="163" onclick="loadOperatorPagePartner('999', 'mvno.fr')" href="javascript:void(0)">mvno.fr</a></li></ul>
+*/
+/*
+#operatList {
+	width: 96%;
+}
+*/
+
+/*
+   La taille du lien CGU n'est pas cohérente avec le reste de la phrase
+*/
+.mwf_form .mwf_coche A, LABEL A {
+	font-size: 14px;
+}
+
+/*
+   Message offre wifi illimité
+*/
+#unlimited-msg {
+	font-size: 13px;
+	font-weight: bold;
+}
+
+/*
+   Onglets
+   Augmenter automatiquement la hauteur si le texte passe a la ligne
+   (petit ecran)
+*/
+.mwf_choix {
+    margin-bottom: 10px;
+    min-height: 18px;
+	height: auto;
+}
+
+/*
+   Liste des operateurs
+   Augmenter automatiquement la hauteur si le texte passe a la ligne
+   (petit ecran)
+*/
+#labelOp {
+    width: 85%;
+}
+
+#mwf_operators {
+	height: auto;
+	min-height: 31px;
+}
+
+/*
+    Uniformisation liste deroulante langues
+*/
+#mwf_langs > #mwf_notFr{
+    font-weight: normal;
+}
+
+/* lors de la selection, implémenté côté javascript
+/*
+ {
+    color: #fff;
+	background-color: #000;
+}
+*/
+
+/*
+   Garder "Mon Reseau" sur la meme ligne
+*/
+.nolinefeed {
+    white-space: nowrap;
+}
+
+A:focus {
+	outline: none;
+}
+/*
+	CSS JQuery-UI (utilisé pour l'auto-complétion)
+*/
+.ui-autocomplete {
+	position: absolute;
+	top: 0;
+	left: 0;
+	cursor: default;
+}
+
+.ui-front {
+	z-index: 100;
+}
+
+.ui-menu {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: block;
+	outline: none;
+}
+.ui-menu .ui-menu {
+	position: absolute;
+}
+.ui-menu .ui-menu-item {
+	position: relative;
+	margin: 0;
+	padding: 3px 1em 3px .4em;
+	cursor: pointer;
+	min-height: 0; /* support: IE7 */
+	/* support: IE10, see #8844 */
+	list-style-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
+}
+.ui-menu .ui-menu-divider {
+	margin: 5px 0;
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+	border-width: 1px 0 0 0;
+}
+.ui-menu .ui-state-focus,
+.ui-menu .ui-state-active {
+	margin: -1px;
+}
+
+.ui-widget {
+	font-family: Verdana,Arial,sans-serif;
+	font-size: 0.8em;
+}
+
+.ui-widget-content {
+	border: 1px solid #aaaaaa;
+	background: #ffffff;
+	color: #222222;
+}
+
+.ui-menu .ui-state-focus,
+.ui-menu .ui-state-active {
+	margin: -1px;
+}
+
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus {
+	border: 1px solid #999999;
+	background: #dadada;
+	font-weight: normal;
+	color: #212121;
+}
+.ui-state-hover a,
+.ui-state-hover a:hover,
+.ui-state-hover a:link,
+.ui-state-hover a:visited,
+.ui-state-focus a,
+.ui-state-focus a:hover,
+.ui-state-focus a:link,
+.ui-state-focus a:visited {
+	color: #212121;
+	text-decoration: none;
+}

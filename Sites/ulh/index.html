@@ -1,0 +1,1511 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- The main page template -->
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<title>Portal</title>
+<!-- Internal resources --><!-- Javascript resources --><!-- JQuery api must always be first --><script type="text/javascript" language="javascript" src="index_files/jquery-1.js"></script><script type="text/javascript" language="javascript" src="index_files/jquery.js"></script><script type="text/javascript" language="javascript" src="index_files/calendar.js"></script><script type="text/javascript" language="javascript" src="index_files/portal.js"></script><!-- CSS --><link type="text/css" rel="stylesheet" href="index_files/portal.css">
+<link type="text/css" rel="stylesheet" href="index_files/calendar-mos.css">
+<!--[if lt IE 9]>
+			<style>
+				#reserved_block div.logonSquareBox {
+					background-position: 0px -200px; /*specific to IE < 9 to display login icon correctly*/
+				}
+			</style>
+		<![endif]--><!-- External resources --><script type="text/javascript" language="javascript" src="index_files/jquery_002.js"></script>
+</head>
+<body dir="ltr">
+		<!-- Body content -->
+	<div id="container">
+	<!-- Will receive Header, Body, Footer and custom blocks ... -->
+<div id="header">
+	<!-- The header template -->
+	<!-- Will be added on top of the page -->
+	&nbsp;
+</div>
+<div id="body">
+	<div>&nbsp;</div>
+	<!-- The body background template -->
+	<!-- Will be added on the center of the page -->
+<div id="lang_block" dir="ltr">
+	<!-- Languages block -->
+	<!-- Must not be modified -->
+	<a id="lang_link[fr]" href="#" style=""><img src="index_files/fr.png" title="Français"></a>
+	<a id="lang_link[de]" href="#" style=""><img src="index_files/de.png" title="Deutsch"></a>
+	<a id="lang_link[en]" href="#" style=""><img src="index_files/en.png" title="English"></a>
+	<a id="lang_link[es]" href="#" style=""><img src="index_files/es.png" title="Español"></a>
+	<a id="lang_link[it]" href="#" style=""><img src="index_files/it.png" title="Italiano"></a>
+	<a id="lang_link[nl]" href="#" style=""><img src="index_files/nl.png" title="Nederlands"></a>
+	<a id="lang_link[pt]" href="#" style=""><img src="index_files/pt.png" title="Português"></a>
+	<a id="lang_link[pl]" href="#" style=""><img src="index_files/pl.png" title="Polski"></a>
+	<a id="lang_link[zh_CN]" href="#" style=""><img src="index_files/cn.png" title="中文(简体)"></a>
+	<a id="lang_link[zh_TW]" href="#" style="display:none"><img src="index_files/cn_TW.png" title="中文(繁體)"></a>
+	<a id="lang_link[ar_LB]" href="#" style=""><img src="index_files/ar.png" title="عربي"></a>
+	<a id="lang_link[ko]" href="#" style=""><img src="index_files/ko.png" title="한국어"></a>
+	<a id="lang_link[ja]" href="#" style=""><img src="index_files/ja.png" title="日本語"></a>
+	<a id="lang_link[th]" href="#" style=""><img src="index_files/th.png" title="ภาษาไทย"></a>
+	<a id="lang_link[ru]" href="#" style=""><img src="index_files/ru.png" title="Русский язык"></a>
+	<a id="lang_link[id]" href="#" style=""><img src="index_files/id.png" title="Bahasa Indonesia"></a>
+</div>
+<div>
+	<div id="reserved_block" style=""><table style="display: none;" id="common_subscription_fields">
+<tbody><tr id="subscriptionForm_user_login_block">
+<!-- User can choose his login (Display status depends on configuration settings) --><td>
+			<span id="subscriptionForm_user_login_text" class="label">Login</span>
+			<span id="subscriptionForm_user_login_state" class="field-state">*</span>
+		</td>
+		<td>
+			<input name="user_login" id="subscriptionForm_user_login" type="text">
+</td>
+	</tr>
+<tr id="subscriptionForm_user_password_block">
+<!-- User can choose his password (Display status depends on configuration settings) --><td>
+			<span id="subscriptionForm_password_help_link" class="helper">&nbsp;</span>
+			<span id="subscriptionForm_user_password_text" class="label">Password</span>
+			<span id="subscriptionForm_user_password_state" class="field-state">*</span>
+		</td>
+		<td>
+			<input name="user_password" id="subscriptionForm_user_password" type="password">
+</td>
+	</tr>
+<tr id="subscriptionForm_password_help_block" class="phone-help" style="display:none">
+<!-- Display help to show the profile password constraint --><td colspan="2">
+			<table><tbody><tr>
+<td style="width: 20%;">
+						&nbsp;
+					</td>
+					<td style="width: 80%;">
+						<div style="text-align: left">
+							<span id="subscriptionForm_password_help_text">Your password must satisfy the following constraints:</span>
+							<ul id="subscriptionForm_password_help_list"><li style="display:none">
+							</li></ul>
+</div>
+					</td>
+				</tr></tbody></table>
+</td>
+	</tr>
+<tr id="subscriptionForm_user_password_confirm_block">
+<!-- Link with the user_password input (Display status depends on configuration settings) --><td>
+			<span id="subscriptionForm_user_password_confirm_text" class="label">Confirm Password</span>
+			<span id="subscriptionForm_user_password_confirm_state" class="field-state">*</span>
+		</td>
+		<td>
+			<input name="user_password_confirm" id="subscriptionForm_user_password_confirm" type="password">
+</td>
+	</tr>
+<tr id="subscriptionForm_last_name_block">
+<!-- Ask user to give his last name (Display status depends on configuration settings) --><td>
+			<span id="subscriptionForm_last_name_text" class="label">Last name</span>
+			<span id="subscriptionForm_last_name_state" class="field-state">*</span>
+		</td>
+		<td>
+			<input name="last_name" id="subscriptionForm_last_name" type="text">
+</td>
+	</tr>
+<tr id="subscriptionForm_first_name_block">
+<!-- Ask user to give his first name (Display status depends on configuration settings) --><td>
+			<span id="subscriptionForm_first_name_text" class="label">First name</span>
+			<span id="subscriptionForm_first_name_state" class="field-state">*</span>
+		</td>
+		<td>
+			<input name="first_name" id="subscriptionForm_first_name" type="text">
+</td>
+	</tr>
+<tr id="subscriptionForm_gender_block">
+<!-- Ask user to give his gender (Display status depends on configuration settings) --><td>
+			<span id="subscriptionForm_gender_text" class="label">Gender</span>
+			<span id="subscriptionForm_gender_state" class="field-state">*</span>
+		</td>
+		<td>
+			<table>
+<tbody><tr>
+<td style="text-align: left;">
+						<input name="gender" value="M" id="subscriptionForm_gender_m" type="radio"><span class="radio-label" id="subscriptionForm_gender_male_text">Male</span>
+					</td>
+				</tr>
+<tr>
+<td style="text-align: left;">
+						<input name="gender" value="F" id="subscriptionForm_gender_f" type="radio"><span class="radio-label" id="subscriptionForm_gender_female_text">Female</span>
+					</td>
+				</tr>
+</tbody></table>
+</td>
+	</tr>
+<tr id="subscriptionForm_birth_date_block">
+<!-- Ask user to give his birth date (Display status depends on configuration settings) --><td>
+			<span id="subscriptionForm_birth_date_text" class="label">Birth date</span>
+			<span id="subscriptionForm_birth_date_state" class="field-state">*</span>
+		</td>
+		<td>
+			<input name="birth_date" placeholder="dd/mm/YYYY" id="subscriptionForm_birth_date" class="birth-date-edit" type="text"><img alt="Calendar" src="index_files/calendar.png" onclick="showCalendar('subscriptionForm_birth_date');" class="birth-date-calendar">
+</td>
+</tr>
+<tr id="subscriptionForm_email_block">
+<!-- Ask user to give his email address (Display status depends on configuration settings) --><td>
+			<span id="subscriptionForm_email_text" class="label">Email address</span>
+			<span id="subscriptionForm_email_state" class="field-state">*</span>
+		</td>
+		<td>
+			<input name="email" id="subscriptionForm_email" type="text">
+</td>
+	</tr>
+<tr id="subscriptionForm_phone_block">
+<!-- Ask user to give his phone number (Display status depends on configuration settings) --><td>
+			<span id="subscriptionForm_phone_help_link" class="helper">&nbsp;</span>
+			<span id="subscriptionForm_phone_text" class="label">Phone number</span>
+			<span id="subscriptionForm_phone_state" class="field-state">*</span>
+		</td>
+		<td>
+			<input name="prefix" value="Prefix" id="subscriptionForm_phone_prefix_value" class="phone-prefix" type="text"><input name="phone" value="Phone number" id="subscriptionForm_phone_phone_value" class="phone-number" type="text">
+</td>
+	</tr>
+<tr id="subscriptionForm_phone_help_block" class="phone-help" style="display:none">
+<!-- Display help to fill the phone number inputs --><td>
+			<table><tbody><tr>
+<td>
+						<span id="subscriptionForm_phone_help_text">To fill in the phone number field, you must give the prefix (first input) then your phone number (second input).</span>
+						<span style="white-space:nowrap">
+							<span id="subscriptionForm_phone_help_example_text">Ex: For Great Britain</span>
+						</span>
+						<span style="white-space:nowrap">
+							<input name="prefix_example" value="44" id="subscriptionForm_phone_help_prefix_example_value" disabled="disabled" class="phone-prefix" type="text"><input name="phone_example" value="xxxxxxxxxx" id="subscriptionForm_phone_help_phone_example_value" disabled="disabled" class="phone-number" type="text"></span>
+					</td>
+				</tr></tbody></table>
+</td>
+		<td>
+			<table><tbody><tr>
+<td nowrap="nowrap">
+						<p><img src="index_files/nl.png">&nbsp;&nbsp;31</p>
+						<p><img src="index_files/fr.png">&nbsp;&nbsp;33</p>
+						<p><img src="index_files/es.png">&nbsp;&nbsp;34</p>
+					</td>
+					<td nowrap="nowrap">
+						<p><img src="index_files/it.png">&nbsp;&nbsp;39</p>
+						<p><img src="index_files/en.png">&nbsp;&nbsp;44</p>
+						<p><img src="index_files/de.png">&nbsp;&nbsp;49</p>
+					</td>
+					<td nowrap="nowrap">
+						<p><img src="index_files/pl.png">&nbsp;&nbsp;48</p>
+						<p><img src="index_files/pt.png">&nbsp;&nbsp;351</p>
+                                                <p><img src="index_files/sw.png">&nbsp;&nbsp;41</p>
+					</td>
+				</tr></tbody></table>
+</td>
+	</tr>
+<tr id="subscriptionForm_organizational_unit_name_block">
+<!-- Ask user to give his organizational unit name (Display status depends on configuration settings) --><td>
+			<span id="subscriptionForm_organizational_unit_name_text" class="label">Company name</span>
+			<span id="subscriptionForm_organizational_unit_name_state" class="field-state">*</span>
+		</td>
+		<td>
+			<input name="organizational_unit_name" id="subscriptionForm_organizational_unit_name" type="text">
+</td>
+	</tr>
+<tr id="subscriptionForm_postal_address_block" class="postalAddress">
+<!-- Ask user to give his postal address (Display status depends on configuration settings) --><td colspan="2" style="border-spacing:0px">
+			<table>
+<tbody><tr>
+<td>
+						<span id="subscriptionForm_postal_address_text" class="label">Postal Address</span>
+						<span id="subscriptionForm_postal_address_state" class="field-state">*</span>
+					</td>
+					<td>
+						<input name="postal_address" id="subscriptionForm_postal_address" type="text">
+</td>
+				</tr>
+<tr>
+<td>
+						<span id="subscriptionForm_postal_code_text" class="label">Postal Code</span>
+						<span id="subscriptionForm_postal_code_state" class="field-state">*</span>
+					</td>
+					<td>
+						<input name="postal_code" id="subscriptionForm_postal_code" type="text">
+</td>
+				</tr>
+<tr>
+<td>
+						<span id="subscriptionForm_postal_locality_name_text" class="label">Locality</span>
+						<span id="subscriptionForm_postal_locality_name_state" class="field-state">*</span>
+					</td>
+					<td>
+						<input name="postal_locality_name" id="subscriptionForm_postal_locality_name" type="text">
+</td>
+				</tr>
+<tr>
+<td>
+						<span id="subscriptionForm_postal_postoffice_box_text" class="label">Postoffice box</span>
+						<span id="subscriptionForm_postal_postoffice_box_state" class="field-state" style="visibility:hidden">*</span>
+					</td>
+					<td>
+						<input name="postal_postoffice_box" id="subscriptionForm_postal_postoffice_box" type="text">
+</td>
+				</tr>
+<tr>
+<td>
+						<span id="subscriptionForm_postal_state_or_province_name_text" class="label">State or Province</span>
+						<span id="subscriptionForm_postal_state_or_province_name_state" class="field-state" style="visibility:hidden">*</span>
+					</td>
+					<td>
+						<input name="postal_state_or_province_name" id="subscriptionForm_postal_state_or_province_name" type="text">
+</td>
+				</tr>
+<tr>
+<td>
+						<span id="subscriptionForm_postal_country_name_text" class="label">Country</span>
+						<span id="subscriptionForm_postal_country_name_state" class="field-state">*</span>
+					</td>
+					<td>
+						<input name="postal_country_name" id="subscriptionForm_postal_country_name" type="text">
+</td>
+				</tr>
+</tbody></table>
+</td>
+	</tr>
+<tr id="subscriptionForm_user_language_block">
+<!-- Ask user to fill preferred language (Display status depends on configuration settings) --><td>
+					<span id="subscriptionForm_user_language_text" class="label">Preferred language</span>
+					<span id="subscriptionForm_user_language_state" class="field-state">*</span>
+		</td>
+		<td>
+			<select name="user_language" style="height:22px" id="subscriptionForm_user_language"><!-- It is possible to show a flag for each language in the list under FFox only. To enable this feature, follow the example below (english); --><!-- <option  style="background: url(./resources/_images/flags/en.png) no-repeat right;" value="en">English</option> --><option value="" selected="selected" id="user_language_not_specified_text">Not specified</option>
+<option value="fr">Français</option>
+<option value="en">English</option>
+<option value="de">Deutsch</option>
+<option value="es">Español</option>
+<option value="it">Italiano</option>
+<option value="nl">Nederlands</option>
+<option value="pt">Português</option>
+<option value="pl">Polski</option>
+<option value="zh_CN">中文(简体)</option>
+<option value="zh_TW">中文(繁體)</option>
+<option style="text-align:right;" value="ar_LB">عربي</option>
+<option value="ko">한국어</option>
+<option value="ja">日本語</option>
+<option value="th">ภาษาไทย</option>
+<option value="ru">Русский язык</option>
+<option value="id">Bahasa Indonesia</option></select>
+</td>
+	</tr>
+<tr id="subscriptionForm_interests_block">
+<!-- Ask user to fill interests (Display status depends on configuration settings) --><td>
+		 	<span id="subscriptionForm_interests_text" class="label">Interests</span>
+		 	<span id="subscriptionForm_interests_state" class="field-state">*</span>
+		</td>
+		<td>
+			<select name="interests" multiple="multiple" id="subscriptionForm_interests"><option value="antiques">Antiques</option>
+<option value="art">Art</option>
+<option value="celebrities">Celebrities (political, sports, entertainment)</option>
+<option value="dance_clubbing">Dance / Clubbing</option>
+<option value="ecology">Ecology</option>
+<option value="events">Events</option>
+<option value="fashion_shopping">Fashion / Shopping</option>
+<option value="fooding_restaurants">Fooding / Restaurants</option>
+<option value="gardening">Gardening</option>
+<option value="interior_design">Interior design</option>
+<option value="movies">Movies</option>
+<option value="music">Music</option>
+<option value="news">News</option>
+<option value="reading">Reading</option>
+<option value="series_tv_shows">Series / TV Shows</option>
+<option value="social_networks">Social networks</option>
+<option value="sports">Sports</option>
+<option value="technology">Technology</option>
+<option value="theater">Theater</option>
+<option value="travel">Travel</option>
+<option value="video_games">Video games</option>
+<option value="wine">Wine</option></select>
+</td>
+	</tr>
+<tr id="subscriptionForm_personal_field_1_block">
+<!-- Ask user to fill the first personal field (Display status depends on configuration settings) --><td>
+			<span id="subscriptionForm_personal_field_1_text" class="label"></span>
+			<span id="subscriptionForm_personal_field_1_state" class="field-state">*</span>
+		</td>
+		<td>
+			<input name="personal_field_1" id="subscriptionForm_personal_field_1" type="text">
+</td>
+	</tr>
+<tr id="subscriptionForm_personal_field_2_block">
+<!-- Ask user to fill the second personal field (Display status depends on configuration settings) --><td>
+			<span id="subscriptionForm_personal_field_2_text" class="label"></span>
+			<span id="subscriptionForm_personal_field_2_state" class="field-state">*</span>
+		</td>
+		<td>
+			<input name="personal_field_2" id="subscriptionForm_personal_field_2" type="text">
+</td>
+	</tr>
+<tr id="subscriptionForm_personal_field_3_block">
+<!-- Ask user to fill the third personal field (Display status depends on configuration settings) --><td>
+			<span id="subscriptionForm_personal_field_3_text" class="label"></span>
+			<span id="subscriptionForm_personal_field_3_state" class="field-state">*</span>
+		</td>
+		<td>
+			<input name="personal_field_3" id="subscriptionForm_personal_field_3" type="text">
+</td>
+	</tr>
+<tr id="subscriptionForm_sponsor_email_block">
+<!-- Ask user to fill the email for sponsor (Display status depends on configuration settings) --><td>
+		 	<span id="subscriptionForm_sponsor_email_text" class="label">Sponsor email address</span>
+		 	<span id="subscriptionForm_sponsor_email_state" class="field-state">*</span>
+		</td>
+		<td>
+		 	<input name="sponsor_email" id="subscriptionForm_sponsor_email" type="text">
+</td>
+	</tr>
+<tr id="subscriptionForm_policy_block">
+<!-- Ask user to accept policy (Display status depends on configuration settings) --><td colspan="2">
+			<br><input name="policy_accept" id="subscriptionForm_policy_accept" type="checkbox">&nbsp;
+			<span id="subscriptionForm_policy_text"></span>
+		</td>
+	</tr>
+<tr id="subscriptionForm_fields_state_block">
+<!-- (Display status depends on configuration settings) --><td colspan="2" class="field-state">
+			<span id="subscriptionForm_fields_state_text" class="field-state">* Mandatory fields</span>
+		</td>
+	</tr>
+</tbody></table>
+		<!-- The Reserved Block -->
+	<div id="error_info_block">
+	<!-- Error Info Block -->
+	<span id="error_info_value">&nbsp;</span>
+</div>
+<div id="waiting_icon_block" style="display:none">
+	<img src="index_files/loader.gif">
+</div>
+
+<div id="forceModifyPwdErrorBlock" style="display:none; text-align: left;">
+	<!-- Div to display errors -->
+	<table><tbody><tr>
+<td style="width: 5%;">
+				&nbsp;
+			</td>
+			<td style="width: 95%;" nowrap="nowrap">
+				<span id="forceModifyPwdErrorBlock_text">The password you entered is not valid:</span>
+				<ul id="forceModifyPwdErrorList"><li style="display:none">
+				</li></ul>
+</td>
+		</tr></tbody></table>
+</div>
+<form name="forceModifyPwdForm" method="post" action="post.php" style="display:none">
+	<!-- Force Modify Password Form -->
+	<div class="title">
+		<span id="forceModifyPwdForm_title_text">Forced password change</span>
+	</div>
+	<div class="explain">
+		<span id="forceModifyPwdForm_explain_text">You must change your password in order to continue.</span>
+	</div>
+	<div class="h-separator"></div>
+	<table>
+<tbody><tr>
+<td>
+				<span id="forceModifyPwdForm_old_pwd_text" class="label">Current password</span>
+				<span class="field-state">*</span>
+			</td>
+			<td>
+				<input name="old_pwd" autocomplete="off" type="password">
+</td>
+		</tr>
+<tr>
+<td>
+				<span id="forceModifyPwdForm_new_pwd_text" class="label">New password</span>
+				<span class="field-state">*</span>
+			</td>
+			<td>
+				<input name="new_pwd" autocomplete="off" type="password">
+</td>
+		</tr>
+<tr>
+<td>
+				<span id="forceModifyPwdForm_confirm_pwd_text" class="label">Confirm new password</span>
+				<span class="field-state">*</span>
+			</td>
+			<td>
+				<input name="confirm_pwd" autocomplete="off" type="password">
+</td>
+		</tr>
+<tr id="forceModifyPwdForm_help_tr" style="display:none">
+<td colspan="2" class="field-state">
+				<span id="forceModifyPwdForm_help_link" class="helper">&nbsp;</span>
+			</td>
+		</tr>
+<tr id="forceModifyPwdForm_help_block" class="phone-help" style="display:none">
+<!-- Display help to show the profile password constraint --><td colspan="2">
+				<table><tbody><tr>
+<td style="width: 20%;">
+							&nbsp;
+						</td>
+						<td style="width: 80%;">
+							<div style="text-align: left">
+								<span id="forceModifyPwdHelpBlock_text">Your password has to be follow those rules:</span>
+								<ul id="forceModifyPwdForm_help_list"><li style="display:none">
+								</li></ul>
+</div>
+						</td>
+					</tr></tbody></table>
+</td>
+		</tr>
+<tr>
+<td colspan="2" class="field-state">
+				<span id="forceModifyPwdForm_fields_state_text" class="field-state">* Mandatory fields</span>
+			</td>
+		</tr>
+<tr>
+<td colspan="2">
+				<button type="button" id="forceModifyPwdForm_back_button">Back</button>
+				&nbsp;
+				<button type="submit" id="forceModifyPwdForm_confirm_button">Confirm</button>
+			</td>
+		</tr>
+</tbody></table>
+</form>
+<form name="logonForm" method="post" action="post.php" style="">
+	<!-- Logon Form -->
+	<div class="title">
+		<span id="logonForm_title_text">Sign In</span>
+	</div>
+	<div class="explain">
+		
+	</div>
+	<div class="h-separator"></div>
+
+	<div id="logonForm_auth_modes_block" style="display:none">
+		<div id="logonForm_shibboleth_authentication_button" class="hoverLink">
+			<table><tbody><tr>
+<td>
+						<img src="index_files/shibboleth.png">
+</td>
+					<td>
+						<span id="logonForm_shibboleth_text">Use your institutional credentials</span>
+					</td>
+				</tr></tbody></table>
+</div>
+		<div id="logonForm_standard_authentication_button" class="hoverLink">
+			<table><tbody><tr>
+<td>
+						<img src="index_files/ticket.png">
+</td>
+					<td>
+						<span id="logonForm_ticket_text">Use a connection ticket</span>
+					</td>
+				</tr></tbody></table>
+</div>
+	</div>
+	<table class="auth_form" id="logonForm_standard_auth_form">
+<tbody><tr id="logonForm_login_field">
+<td>
+				<span id="logonForm_login_text" class="label">Login</span>
+			</td>
+			<td>
+				<input name="login" action="post.php" autocomplete="on" type="text">
+</td>
+		</tr>
+<tr id="logonForm_password_field">
+<td>
+				<span id="logonForm_password_text" class="label">Password</span>
+			</td>
+			<td>
+				<input name="password" action="post.php" autocomplete="on" type="password">
+</td>
+		</tr>
+<tr id="logonForm_forgotPasswordLink" style="display:none">
+<td colspan="2">
+				<a id="logonForm_forgotPasswordLink_link" href="#"><span id="logonForm_forgotPasswordLink_text">Forgot password?</span></a>
+			</td>
+		</tr>
+<tr id="logonForm_accountRefillLink" style="display:none">
+<td colspan="2">
+				<a id="logonForm_accountRefillLink_link" href="#"><span id="logonForm_accountRefillLink_text">Refill your account</span></a>
+			</td>
+		</tr>
+<tr id="logonForm_policy_block">
+<!-- Check Box Confirm (Visible status depends on configuration option) --><td colspan="2">
+				<br><input name="policy_accept" type="checkbox">&nbsp;
+				<span id="logonForm_policy_text">Je reconnais avoir pris connaissance de la présente charte</span>
+			</td>
+		</tr>
+<tr>
+<td colspan="2">
+				&nbsp;
+			</td>
+		</tr>
+<tr>
+<td id="logonFormSubscriptionLink">
+				<!-- Link to access to a subscription form (Single Mode) or the subscription mode selection form -->
+				
+				<button type="button" id="logonForm_authentication_form_back_button" style="display:none">Back</button>
+			</td>
+			<td id="logonFormConnectionLink">
+				<button type="submit" id="logonForm_connect_button">Connect</button>
+			</td>
+		</tr>
+</tbody></table>
+<table id="twitterFollow" style="display: none;"><tbody><tr>
+<td colspan="2">
+				<br><input name="twitter_follow" type="checkbox">&nbsp;
+				<span id="logonForm_twitter_follow_text">Follow Twitter account</span><span id="logonForm_twitter_follow_auto_screen_name"></span>
+			</td>
+		</tr></tbody></table>
+<table id="facebookLike" style="display: none;"><tbody><tr>
+<td colspan="2">
+				<br><input name="facebook_like" type="checkbox">&nbsp;
+				<span id="logonForm_facebook_like_text">Publish a Facebook Like on</span><span id="logonForm_facebook_like_url"></span>
+			</td>
+		</tr></tbody></table>
+<div id="logonForm_socialNetworkChoice_grid" style="display:none">
+		<div id="facebookLink" class="smallBox facebookSmallBox" title="Use your Facebook credentials" style="display:none"></div>
+		<div id="googleLink" class="smallBox googleSmallBox" title="Use your Google credentials" style="display:none"></div>
+		<div id="linkedinLink" class="smallBox linkedinSmallBox" title="Use your LinkedIn credentials" style="display:none"></div>
+		<div id="twitterLink" class="smallBox twitterSmallBox" title="Use your Twitter credentials" style="display:none"></div>
+	</div>
+	<div id="logonForm_socialNetworkChoice_openid_grid" style="display:none">
+	</div>
+	<div id="logonForm_privatePolicy_dialog" class="modal">
+		<!-- Private policy modal window (Will be displayed for social networks private policy acceptance) -->
+		<div class="modal-content">
+			<div class="modal-body">
+				<span class="close" id="logonForm_privatePolicy_cross_span">×</span>
+				<br><p>
+					<input id="logonForm_privatePolicy_accept" type="checkbox">&nbsp;
+					<span id="logonForm_privatePolicy_facebook_text"></span>
+					<span id="logonForm_privatePolicy_google_text"></span>
+					<span id="logonForm_privatePolicy_linkedin_text"></span>
+					<span id="logonForm_privatePolicy_twitter_text"></span>
+				</p>
+				<br>
+</div>
+			<div class="modal-footer">
+				<h3>
+					<button type="button" id="logonForm_privatePolicy_back_button">Back</button>
+					<button type="button" id="logonForm_privatePolicy_connect_button">Connect</button>
+				</h3>
+			</div>
+		</div>
+	</div>
+</form>
+<div id="subscriptionChoice" style="display:none">
+	<!-- Subscription Choice block (Will be displayed only if more than one subscription mode are configured )-->
+	<div class="title">
+		<span id="subscriptionChoice_title_text">Register choice</span>
+	</div>
+	<div class="explain">
+		<span id="subscriptionChoice_explain_text">Please choose the register mode you want to use by clicking on it.</span>
+	</div>
+	<div class="h-separator"></div>
+	<div id="subscriptionChoiceInsert"></div>
+	<br><div class="center">
+		<button type="button" id="logonFormSubscriptionLink_back_button">Back</button>
+	</div>
+</div>
+<form name="feedbackForm" style="display:none">
+	<!-- Feedback Form-->
+	<table cellpadding="0" cellspacing="0">
+<tbody><tr id="feedbackForm_pms_customer_block" style="">
+<!-- PMS Display (Shows only if PMS) --><td colspan="2">
+				<span id="feedbackForm_pms_customer_value"></span>
+			</td>
+		</tr>
+<tr id="feedbackForm_pms_message_block" style="">
+<!-- PMS Display (Shows only if PMS) --><td colspan="2">
+				<span id="feedbackForm_pms_message_value"></span>
+			</td>
+		</tr>
+<tr id="feedbackForm_caution_block" class="caution" style="display: none;">
+<td colspan="2">
+				<span id="feedbackForm_caution_text">CAUTION: closing this window will disconnect you.</span>
+				<span id="feedbackForm_caution_oob_text">Warning: to avoid wasting 
+time-credit, you have to use the logout button, or disconnect your 
+device from the network at the end of your session.</span>
+			</td>
+		</tr>
+<tr id="feedbackForm_requested_url_block" style="display: none;">
+<td colspan="2">
+				<br><p><a id="feedbackForm_requested_url_link" href="#" target="_blank"><span id="feedbackForm_requested_url_text">Click here to access to the requested page</span></a></p>
+<p>
+				<br></p>
+</td>
+		</tr>
+<tr id="feedbackForm_postConnectRedirectDelay_block" style="display:none">
+<td colspan="2">
+				<p><span id="feedbackForm_postConnectRedirectDelay_text">You will be redirected in ...</span></p>
+				<br>
+</td>
+		</tr>
+<tr id="feedbackForm_login_block" style="">
+<!-- User Id (Shows only if no PPS) --><td class="label">
+				<span id="feedbackForm_login_text">Login</span>
+			</td>
+			<td class="feedback">
+				<span id="feedbackForm_login_value"></span>
+			</td>
+		</tr>
+<tr id="feedbackForm_profile_block">
+<td class="label">
+				<span id="feedbackForm_profile_text">Profile</span>
+			</td>
+			<td class="feedback">
+				<span id="feedbackForm_profile_value"></span>
+			</td>
+		</tr>
+<tr id="feedbackForm_package_block" style="display:none">
+<!-- Package (PMS/Paypal) (Shows only if needed) --><td class="label">
+				<span id="feedbackForm_package_text">Package</span>
+			</td>
+			<td class="feedback">
+				<span id="feedbackForm_package_value"></span>
+			</td>
+		</tr>
+<tr id="feedbackForm_services_block">
+<td class="label">
+				<span id="feedbackForm_services_text">Services</span>
+			</td>
+			<td class="feedback">
+				<span id="feedbackForm_services_value"></span>
+			</td>
+		</tr>
+
+
+<tr id="feedbackForm_incoming_zone_block">
+<td class="label">
+				<span id="feedbackForm_incoming_zone_text">Incoming Zone</span>
+			</td>
+			<td class="feedback">
+				<span id="feedbackForm_incoming_zone_value">ZONE-IN-50</span>
+			</td>
+		</tr>
+<tr style="display: none;" id="feedbackForm_multidevice_block">
+<td class="label">
+				<span id="feedbackForm_multidevice_text">Additional connections</span>
+			</td>
+			<td class="feedback">
+				<span id="feedbackForm_multidevice_value"></span>
+			</td>
+		</tr>
+<tr id="feedbackForm_schedule_block">
+<!-- User Schedule --><td class="label">
+				<span id="feedbackForm_schedule_text">Schedule</span>
+			</td>
+			<td class="feedback">
+				<span id="feedbackForm_schedule_value"></span>
+			</td>
+		</tr>
+<tr id="feedbackForm_validity_block">
+<!-- User Validity --><td class="label">
+				<span id="feedbackForm_validity_text">Validity</span>
+			</td>
+			<td class="feedback">
+				<span id="feedbackForm_validity_value">Always valid</span>
+			</td>
+		</tr>
+<tr style="display: none;" id="feedbackForm_time_credit_block">
+<!-- User time credit with renew settings --><td class="label">
+				<span id="feedbackForm_time_credit_text">Time Credit</span>
+			</td>
+			<td class="feedback">
+				<span id="feedbackForm_time_credit_value"></span>
+			</td>
+		</tr>
+<tr style="display: none;" id="feedbackForm_remaining_time_credit_block">
+<!-- User remaining time credit --><td class="label">
+				<span id="feedbackForm_remaining_time_credit_text">Time credit remaining</span>
+			</td>
+			<td class="feedback">
+				<span id="feedbackForm_remaining_time_credit_value"></span>
+			</td>
+		</tr>
+<tr style="display: none;" id="feedbackForm_automatic_disconnection_block">
+<!-- User remainging time before forced disconnection --><td class="label">
+				<span id="feedbackForm_automatic_disconnection_text">Automatic disconnection in</span>
+			</td>
+			<td class="feedback">
+				<span id="feedbackForm_automatic_disconnection_value"></span>
+			</td>
+		</tr>
+<tr id="feedbackForm_pps_total_time_credit_block" style="display:none">
+<!-- User total time credit (Shows only if PPS) --><td class="label">
+				<span id="feedbackForm_pps_total_time_credit_text">Total Time</span>
+			</td>
+			<td class="feedback">
+				<span id="feedbackForm_pps_total_time_credit_value">&nbsp;</span>
+			</td>
+		</tr>
+<tr id="feedbackForm_pps_total_consumed_time_credit_block" style="display:none">
+<!-- User total consumed time credit (Shows only if PPS) --><td class="label">
+				<span id="feedbackForm_pps_total_consumed_time_credit_text">Consumed Time</span>
+			</td>
+			<td class="feedback">
+				<span id="feedbackForm_pps_total_consumed_time_credit_value">&nbsp;</span>
+			</td>
+		</tr>
+<tr id="feedbackForm_quota_total_consumed_data_block" style="display: none;">
+<!-- User consumed data since --><td class="label">
+				<span id="feedbackForm_quota_total_consumed_data_text">Consumed data</span>
+			</td>
+			<td class="feedback">
+				<span id="feedbackForm_quota_total_consumed_data_value"></span>
+			</td>
+		</tr>
+<tr id="feedbackForm_settings_link">
+<td colspan="2"><div id="modifyPwdLink" style="">
+	<!-- Link to access to Modify Password Form -->
+	<a style="display: none;" id="modifyPwdLink_link" href="#"><span id="modifyPwdLink_text">Modify your password</span></a>
+</div><div id="manageAccountLink" style="display:none">
+	<!-- Link to access to Manage Account Form -->
+	<a id="manageAccountLink_link" href="#"><span id="manageAccountLink_text">Manage my account</span></a>
+</div></td>
+		</tr>
+<tr>
+<td colspan="2">
+				&nbsp;
+			</td>
+		</tr>
+<tr>
+<td colspan="2">
+				<button type="submit" id="feedbackForm_disconnect_button">Logout</button>
+			</td>
+		</tr>
+</tbody></table>
+</form>
+
+<div id="modifyPwdErrorBlock" style="display:none; text-align: left;">
+	<!-- Div to display errors -->
+	<table><tbody><tr>
+<td style="width: 5%;">
+				&nbsp;
+			</td>
+			<td style="width: 95%;" nowrap="nowrap">
+				<span id="modifyPwdErrorBlock_text">The password you entered is not valid:</span>
+				<ul id="modifyPwdErrorList"><li style="display:none">
+				</li></ul>
+</td>
+		</tr></tbody></table>
+</div>
+<form name="modifyPwdForm" style="display:none">
+	<!-- Modify Password Form -->
+	<div class="title">
+		<span id="modifyPwdForm_title_text">Password change</span>
+	</div>
+	<div class="explain">
+		<span id="modifyPwdForm_explain_text">You can modify your password using the form bellow.</span>
+	</div>
+	<div class="h-separator"></div>
+	<table>
+<tbody><tr>
+<td>
+				<span id="modifyPwdForm_old_pwd_text" class="label">Current password</span>
+				<span class="field-state">*</span>
+			</td>
+			<td>
+				<input name="old_pwd" autocomplete="off" type="password">
+</td>
+		</tr>
+<tr>
+<td>
+				<span id="modifyPwdForm_new_pwd_text" class="label">New password</span>
+				<span class="field-state">*</span>
+			</td>
+			<td>
+				<input name="new_pwd" autocomplete="off" type="password">
+</td>
+		</tr>
+<tr>
+<td>
+				<span id="modifyPwdForm_confirm_pwd_text" class="label">Confirm new password</span>
+				<span class="field-state">*</span>
+			</td>
+			<td>
+				<input name="confirm_pwd" autocomplete="off" type="password">
+</td>
+		</tr>
+<tr id="modifyPwdForm_help_tr" style="display:none">
+<td colspan="2" class="field-state">
+				<span id="modifyPwdForm_help_link" class="helper">&nbsp;</span>
+			</td>
+		</tr>
+<tr id="modifyPwdForm_help_block" class="phone-help" style="display:none">
+<!-- Display help to show the profile password constraint --><td colspan="2">
+				<table><tbody><tr>
+<td style="width: 20%;">
+							&nbsp;
+						</td>
+						<td style="width: 80%;">
+							<div style="text-align: left">
+								<span id="modifyPwdHelpBlock_text">Your password has to be follow those rules:</span>
+								<ul id="modifyPwdForm_help_list"><li style="display:none">
+								</li></ul>
+</div>
+						</td>
+					</tr></tbody></table>
+</td>
+		</tr>
+<tr>
+<td colspan="2" class="field-state">
+				<span id="modifyPwdForm_fields_state_text" class="field-state">* Mandatory fields</span>
+			</td>
+		</tr>
+<tr>
+<td colspan="2">
+				<button type="button" id="modifyPwdForm_back_button">Back</button>
+				&nbsp;
+				<button type="submit" id="modifyPwdForm_confirm_button">Confirm</button>
+			</td>
+		</tr>
+</tbody></table>
+</form>
+
+
+
+
+<form name="upgradeAccountCheckForm" style="display:none">
+	<!-- PayPal Payment Check Form -->
+	<!-- Can be changed -->
+	<div class="title">
+		<span id="upgradeAccountCheckForm_title_text">Manage my account</span>
+	</div>
+	<div class="explain">
+		<span id="upgradeAccountCheckForm_explain_text">If you have completed 
+the payment process or have remainings unactivated options, please click
+ on the 'Check' button to check your payment and activate the options.</span>
+	</div>
+	<div class="h-separator"></div>
+	<table>
+<tbody><tr>
+<td colspan="2">
+				&nbsp;
+			</td>
+		</tr>
+<tr>
+<td colspan="2">
+				<button type="button" id="upgradeAccountCheckForm_back_button">Back</button>
+				<button type="button" id="upgradeAccountCheckForm_check_button">Check</button>
+			</td>
+		</tr>
+</tbody></table>
+</form>
+
+
+<form name="pwdRecoveryResendForm" style="display:none">
+	<div class="title">
+		<span id="pwdRecoveryResendForm_title_text">Password recovery</span>
+	</div>
+	<div class="explain">
+		<span id="pwdRecoveryResendForm_explain_text">This page will help you to regenerate a new password.</span>
+	</div>
+	<div class="h-separator"></div>
+	<table id="pwdRecoveryResendForm_links_block" style="display:none">
+<tbody><tr id="pwdRecoveryResendForm_email_link_block" style="display:none">
+<td colspan="2">
+				<a id="pwdRecoveryResendForm_email_link" href="#"><span id="pwdRecoveryResendForm_email_text">Resend my password by email</span></a>
+			</td>
+		</tr>
+<tr id="pwdRecoveryResendForm_sms_link_block" style="display:none">
+<td colspan="2">
+				<a id="pwdRecoveryResendForm_sms_link" href="#"><span id="pwdRecoveryResendForm_sms_text">Resend my password by SMS</span></a>
+			</td>
+		</tr>
+<tr id="pwdRecoveryResendForm_questions_link_block" style="display:none">
+<td colspan="2">
+				<a id="pwdRecoveryResendForm_questions_link" href="#"><span id="pwdRecoveryResendForm_questions_text">Answer my secret questions to get a new password</span></a>
+			</td>
+		</tr>
+<tr>
+<td colspan="2">
+				&nbsp;
+			</td>
+		</tr>
+<tr>
+<td colspan="2">
+				<button type="button" id="pwdRecoveryResendForm_back_button">Back</button>
+			</td>
+		</tr>
+</tbody></table>
+<table id="pwdRecoveryResendForm_questions_block" style="display:none">
+<tbody><tr>
+<td>
+				<span id="pwdRecoveryResendForm_questionLabel_text" class="label">Question</span>
+				&nbsp;&nbsp;
+			</td>
+			<td>
+				&nbsp;&nbsp;
+				<span id="pwdRecoveryResendForm_answerLabel_text" class="label">My answer</span>
+			</td>
+		</tr>
+<tr id="pwdRecoveryResendForm_question_base_block" style="display:none">
+<td>
+				<span id="pwdRecoveryResendForm_question_base_value"></span>
+			</td>
+			<td>
+				<input name="answer_base" type="text">
+</td>
+		</tr>
+<tr>
+<td>
+				<button type="button" id="pwdRecoveryResendForm_questions_back_button">Back</button>
+			</td>
+			<td>
+				<button type="submit" id="pwdRecoveryResendForm_questions_update_button">Confirm</button>
+			</td>
+		</tr>
+</tbody></table>
+</form>
+<form name="pwdRecoveryResendResultForm" style="display:none">
+	<div class="title">
+		<span id="pwdRecoveryResendResultForm_title_text">Password recovery</span>
+	</div>
+	<div class="explain">
+		<span id="pwdRecoveryResendResultForm_explain_text">Please take note of your new password. It will be needed to sign in.</span>
+	</div>
+	<div class="h-separator"></div>
+	<table>
+<tbody><tr>
+<td>
+				<span id="pwdRecoveryResendResultForm_password_text" class="label">Password</span>
+			</td>
+			<td class="feedback">
+				<span id="pwdRecoveryResendResultForm_password_value"></span>
+			</td>
+		</tr>
+<tr>
+<td colspan="2">
+				&nbsp;
+			</td>
+		</tr>
+<tr>
+<td colspan="2">
+				<button type="button" id="pwdRecoveryResendResultForm_back_button">Back</button>
+			</td>
+		</tr>
+</tbody></table>
+</form>
+<form name="pwdRecoverySetForm" style="display:none">
+	<div class="title">
+		<span id="pwdRecoverySetForm_title_text">Password recovery - Secret questions</span>
+	</div>
+	<div class="explain">
+		<span id="pwdRecoverySetForm_explain_text">In order to recover your password, you should choose your secret question and answer it.</span><!-- Plural => secret questions and answer them (if not only one secret question) -->
+	</div>
+	<div class="h-separator"></div>
+	<table>
+<tbody><tr>
+<td>
+				<span id="pwdRecoverySetForm_questionLabel_text" class="label">Question</span>
+				&nbsp;&nbsp;
+			</td>
+			<td>
+				&nbsp;&nbsp;
+				<span id="pwdRecoverySetForm_answerLabel_text" class="label">My answer</span>
+			</td>
+		</tr>
+<tr id="pwdRecoverySetForm_question_base_block" style="display:none">
+<td>
+				<select name="question_base"><option value="" id="pwdRecoverySetForm_question_base_default_option" disabled="disabled" selected="selected">Choose a question</option></select>
+</td>
+			<td>
+				<input name="answer_base" type="text">
+</td>
+		</tr>
+<tr>
+<td>
+				<button type="button" id="pwdRecoverySetForm_back_button">Back</button>
+			</td>
+			<td>
+				<button type="submit" id="pwdRecoverySetForm_update_button">Update</button>
+			</td>
+		</tr>
+</tbody></table>
+</form>
+
+<form name="manageAccountForm" style="display:none">
+	<!-- Get Upgrade Account Form -->
+	<div class="title">
+		<span id="manageAccountForm_title_text">Manage my account</span>
+	</div>
+	<div class="explain">
+		<span id="manageAccountForm_explain_text">You can update your account settings.</span>
+	</div>
+	<div class="h-separator"></div>
+	<table id="manageAccountForm_links_block">
+<tbody><tr id="manageAccountForm_links_personal_settings_link_block" style="display:none">
+<td colspan="2">
+				<a id="manageAccountForm_links_personal_settings_link" href="#"><span id="manageAccountForm_links_personal_settings_link_text">Modify my settings</span></a>
+			</td>
+		</tr>
+<tr id="manageAccountForm_links_devices_link_block" style="display:none">
+<td colspan="2">
+				<a id="manageAccountForm_links_devices_link" href="#"><span id="manageAccountForm_links_devices_link_text">Modify my devices</span></a>
+			</td>
+		</tr>
+<tr id="manageAccountForm_links_modify_my_package_block" style="display:none">
+<td colspan="2">
+				<a id="manageAccountForm_links_modify_my_package_link" href="#"><span id="manageAccountForm_links_modify_my_package_text">Modify my package</span></a>
+			</td>
+		</tr>
+<tr id="manageAccountForm_links_account_refill_link_block" style="display:none">
+<td colspan="2">
+				<a id="manageAccountForm_links_account_refill_link" href="#"><span id="manageAccountForm_links_account_refill_link_text">Refill your account</span></a>
+			</td>
+		</tr>
+<tr id="manageAccountForm_links_others_links_block">
+<td colspan="2"><div id="pwdRecoverySetLink" style="display:none">
+	<!-- Link to access to pwdRecoverySet Form -->
+	<a id="pwdRecoverySetLink_link" href="#"><span id="pwdRecoverySetLink_text">Manage my secret questions</span></a>
+</div></td>
+		</tr>
+<tr>
+<td colspan="2">
+				&nbsp;
+			</td>
+		</tr>
+<tr>
+<td colspan="2">
+				<div class="explain">
+					
+				</div>
+				
+			</td>
+		</tr>
+<tr>
+<td colspan="2">
+				
+			</td>
+		</tr>
+<tr>
+<td colspan="2">
+					
+				</td>
+			</tr>
+<tr>
+<td colspan="2">
+					&nbsp;
+				</td>
+			</tr>
+<tr>
+<td colspan="2">
+				<button type="button" id="manageAccountForm_links_back_button">Back</button>
+			</td>
+		</tr>
+</tbody></table>
+<table id="manageAccountForm_personal_settings_block" style="display:none">
+<tbody><tr id="manageAccountForm_personal_settings_last_name_block">
+<!-- Ask user to give his last name (Display status depends on configuration settings) --><td>
+				<span id="manageAccountForm_personal_settings_last_name_text" class="label">Last name</span>
+ 				<span id="manageAccountForm_personal_settings_last_name_state" class="field-state">*</span>
+			</td>
+			<td>
+				<input name="last_name" type="text">
+</td>
+		</tr>
+<tr id="manageAccountForm_personal_settings_first_name_block">
+<!-- Ask user to give his first name (Display status depends on configuration settings) --><td>
+				<span id="manageAccountForm_personal_settings_first_name_text" class="label">First name</span>
+ 				<span id="manageAccountForm_personal_settings_first_name_state" class="field-state">*</span>
+			</td>
+			<td>
+				<input name="first_name" type="text">
+</td>
+		</tr>
+<tr id="manageAccountForm_personal_settings_email_block">
+<!-- Ask user to give his email address (Display status depends on configuration settings) --><td>
+				<span id="manageAccountForm_personal_settings_email_text" class="label">Email address</span>
+ 				<span id="manageAccountForm_personal_settings_email_state" class="field-state">*</span>
+			</td>
+			<td>
+				<input name="email" type="text">
+</td>
+		</tr>
+<tr id="manageAccountForm_personal_settings_phone_block">
+<!-- Ask user to give his phone number (Display status depends on configuration settings) --><td>
+				<span id="manageAccountForm_personal_settings_phone_help_link" class="helper">&nbsp;</span>
+				<span id="manageAccountForm_personal_settings_phone_text" class="label">Phone number</span>
+ 				<span id="manageAccountForm_personal_settings_phone_state" class="field-state">*</span>
+			</td>
+			<td>
+				<input name="prefix" value="Prefix" id="manageAccountForm_personal_settings_phone_prefix_value" class="phone-prefix" style="display:none; margin-right: 8px;" type="text"><input name="phone" value="Phone number" id="manageAccountForm_personal_settings_phone_phone_value" class="phone-number" style="margin-left:0px;" type="text">
+</td>
+		</tr>
+<tr id="manageAccountForm_personal_settings_phone_help_block" class="phone-help" style="display:none">
+<!-- Display help to fill the phone number inputs --><td>
+				<table><tbody><tr>
+<td>
+							<span id="manageAccountForm_personal_settings_phone_help_text">To fill in the phone number field, you must give the prefix (first input) then your phone number (second input).</span>
+							<span style="white-space:nowrap">
+								<span id="manageAccountForm_personal_settings_phone_help_example_text">Ex: For Great Britain</span>
+							</span>
+							<span style="white-space:nowrap">
+								<input name="prefix_example" value="44" id="manageAccountForm_personal_settings_phone_help_prefix_example_value" disabled="disabled" class="phone-prefix" type="text"><input name="phone_example" value="xxxxxxxxxx" id="manageAccountForm_personal_settings_phone_help_phone_example_value" disabled="disabled" class="phone-number" type="text"></span>
+						</td>
+					</tr></tbody></table>
+</td>
+			<td>
+				<table><tbody><tr>
+<td nowrap="nowrap">
+							<p><img src="index_files/nl.png">&nbsp;&nbsp;31</p>
+							<p><img src="index_files/fr.png">&nbsp;&nbsp;33</p>
+							<p><img src="index_files/es.png">&nbsp;&nbsp;34</p>
+						</td>
+						<td nowrap="nowrap">
+							<p><img src="index_files/it.png">&nbsp;&nbsp;39</p>
+							<p><img src="index_files/en.png">&nbsp;&nbsp;44</p>
+							<p><img src="index_files/de.png">&nbsp;&nbsp;49</p>
+						</td>
+						<td nowrap="nowrap">
+							<p><img src="index_files/pl.png">&nbsp;&nbsp;48</p>
+							<p><img src="index_files/pt.png">&nbsp;&nbsp;351</p>
+						</td>
+					</tr></tbody></table>
+</td>
+		</tr>
+<tr id="manageAccountForm_personal_settings_organizational_unit_name_block">
+<!-- Ask user to give his organizational unit name (Display status depends on configuration settings) --><td>
+				<span id="manageAccountForm_personal_settings_organizational_unit_name_text" class="label">Company name</span>
+ 				<span id="manageAccountForm_personal_settings_organizational_unit_name_state" class="field-state">*</span>
+			</td>
+			<td>
+				<input name="organizational_unit_name" type="text">
+</td>
+		</tr>
+<tr id="manageAccountForm_personal_settings_postal_address_block" class="postalAddress">
+<!-- Ask user to give his postal address (Display status depends on configuration settings) --><td colspan="2" style="border-spacing:0px">
+				<table>
+<tbody><tr>
+<td>
+							<span id="manageAccountForm_personal_settings_postal_address_text" class="label">Postal Address</span>
+ 							<span id="manageAccountForm_personal_settings_postal_address_state" class="field-state">*</span>
+						</td>
+						<td>
+							<input name="postal_address" type="text">
+</td>
+					</tr>
+<tr>
+<td>
+							<span id="manageAccountForm_personal_settings_postal_code_text" class="label">Postal Code</span>
+ 							<span id="manageAccountForm_personal_settings_postal_code_state" class="field-state">*</span>
+						</td>
+						<td>
+							<input name="postal_code" type="text">
+</td>
+					</tr>
+<tr>
+<td>
+							<span id="manageAccountForm_personal_settings_postal_locality_name_text" class="label">Locality</span>
+ 							<span id="manageAccountForm_personal_settings_postal_locality_name_state" class="field-state">*</span>
+						</td>
+						<td>
+							<input name="postal_locality_name" type="text">
+</td>
+					</tr>
+<tr>
+<td>
+							<span id="manageAccountForm_personal_settings_postal_postoffice_box_text" class="label">Postoffice box</span>
+							<span id="manageAccountForm_personal_settings_postal_postoffice_box_state" class="field-state" style="visibility:hidden">*</span>
+						</td>
+						<td>
+							<input name="postal_postoffice_box" type="text">
+</td>
+					</tr>
+<tr>
+<td>
+							<span id="manageAccountForm_personal_settings_postal_state_or_province_name_text" class="label">State or Province</span>
+ 							<span id="manageAccountForm_personal_settings_postal_state_or_province_name_state" class="field-state" style="visibility:hidden">*</span>
+						</td>
+						<td>
+							<input name="postal_state_or_province_name" type="text">
+</td>
+					</tr>
+<tr>
+<td>
+							<span id="manageAccountForm_personal_settings_postal_country_name_text" class="label">Country</span>
+ 							<span id="manageAccountForm_personal_settings_postal_country_name_state" class="field-state">*</span>
+						</td>
+						<td>
+							<input name="postal_country_name" type="text">
+</td>
+					</tr>
+</tbody></table>
+</td>
+		</tr>
+<tr id="manageAccountForm_personal_settings_personal_field_1_block" style="display:none">
+<td>
+				<span id="manageAccountForm_personal_settings_personal_field_1_text" class="label"></span>
+ 				<span id="manageAccountForm_personal_settings_personal_field_1_state" class="field-state">*</span>
+			</td>
+			<td>
+				<input name="personal_field_1" type="text">
+</td>
+		</tr>
+<tr id="manageAccountForm_personal_settings_personal_field_2_block" style="display:none">
+<td>
+				<span id="manageAccountForm_personal_settings_personal_field_2_text" class="label"></span>
+ 				<span id="manageAccountForm_personal_settings_personal_field_2_state" class="field-state">*</span>
+			</td>
+			<td>
+				<input name="personal_field_2" type="text">
+</td>
+		</tr>
+<tr id="manageAccountForm_personal_settings_personal_field_3_block" style="display:none">
+<td>
+				<span id="manageAccountForm_personal_settings_personal_field_3_text" class="label"></span>
+ 				<span id="manageAccountForm_personal_settings_personal_field_3_state" class="field-state">*</span>
+			</td>
+			<td>
+				<input name="personal_field_3" type="text">
+</td>
+		</tr>
+<tr id="manageAccountForm_personal_settings_personal_fields_state_block">
+<td colspan="2" class="field-state">
+				<span id="manageAccountForm_personal_settings_personal_fields_state_text" class="field-state">* Mandatory fields</span>
+			</td>
+		</tr>
+<tr>
+<td>
+				<button type="button" id="manageAccountForm_personal_settings_back_button">Back</button>
+			</td>
+			<td>
+				<button type="button" id="manageAccountForm_personal_settings_update_button">Update</button>
+			</td>
+		</tr>
+</tbody></table>
+<table id="manageAccountForm_devices_block" style="display:none">
+<tbody><tr>
+<td>
+				<span id="manageAccountForm_devices_mac_address_text" class="label">MAC Address</span>
+				&nbsp;&nbsp;
+			</td>
+			<td>
+				&nbsp;&nbsp;
+				<span id="manageAccountForm_devices_comment_text" class="label">Comment</span>
+			</td>
+		</tr>
+<tr id="manageAccountForm_devices_no_device_block">
+<td colspan="2">
+				<span id="manageAccountForm_devices_no_device_text">No registered devices</span>
+			</td>
+		</tr>
+<tr id="manageAccountForm_devices_base_block" style="display:none">
+<td>
+				<div class="trashButton"></div>
+				&nbsp;
+				<span id="manageAccountForm_devices_base_value">&nbsp;</span>
+			</td>
+			<td>
+				<input name="device_base_comment" type="text">
+</td>
+		</tr>
+<tr>
+<td colspan="2">
+				&nbsp;
+			</td>
+		</tr>
+<tr>
+<td>
+				<button type="button" id="manageAccountForm_devices_back_button">Back</button>
+			</td>
+			<td>
+				<button type="button" id="manageAccountForm_devices_update_button">Update</button>
+			</td>
+		</tr>
+</tbody></table>
+</form>
+
+
+
+<div id="oneSubscriptionErrorBlock" style="display:none; text-align: left;">
+	<!-- Div to display errors -->
+	<table><tbody><tr>
+<td style="width: 5%;">
+				&nbsp;
+			</td>
+			<td style="width: 95%;" nowrap="nowrap">
+				<span id="oneSubscriptionErrorBlock_text">The password you entered is not valid:</span>
+				<ul id="oneSubscriptionErrorList"><li style="display:none">
+				</li></ul>
+</td>
+		</tr></tbody></table>
+</div>
+
+
+<div id="directSubscriptionErrorBlock" style="display:none; text-align: left;">
+	<!-- Div to display errors -->
+	<table><tbody><tr>
+<td style="width: 5%;">
+				&nbsp;
+			</td>
+			<td style="width: 95%;" nowrap="nowrap">
+				<span id="directSubscriptionErrorBlock_text">The password you entered is not valid:</span>
+				<ul id="directSubscriptionErrorList"><li style="display:none">
+				</li></ul>
+</td>
+		</tr></tbody></table>
+</div>
+
+
+
+<div id="printSubscriptionErrorBlock" style="display:none; text-align: left;">
+	<!-- Div to display errors -->
+	<table><tbody><tr>
+<td style="width: 5%;">
+				&nbsp;
+			</td>
+			<td style="width: 95%;" nowrap="nowrap">
+				<span id="printSubscriptionErrorBlock_text">The password you entered is not valid:</span>
+				<ul id="printSubscriptionErrorList"><li style="display:none">
+				</li></ul>
+</td>
+		</tr></tbody></table>
+</div>
+
+
+
+
+
+
+
+<div id="paypalSubscriptionErrorBlock" style="display:none; text-align: left;">
+	<!-- Div to display errors -->
+	<table><tbody><tr>
+<td style="width: 5%;">
+				&nbsp;
+			</td>
+			<td style="width: 95%;" nowrap="nowrap">
+				<span id="paypalSubscriptionErrorBlock_text">The password you entered is not valid:</span>
+				<ul id="paypalSubscriptionErrorList"><li style="display:none">
+				</li></ul>
+</td>
+		</tr></tbody></table>
+</div>
+
+
+
+
+
+
+<div id="ogoneSubscriptionErrorBlock" style="display:none; text-align: left;">
+	<!-- Div to display errors -->
+	<table><tbody><tr>
+<td style="width: 5%;">
+				&nbsp;
+			</td>
+			<td style="width: 95%;" nowrap="nowrap">
+				<span id="ogoneSubscriptionErrorBlock_text">The password you entered is not valid:</span>
+				<ul id="ogoneSubscriptionErrorList"><li style="display:none">
+				</li></ul>
+</td>
+		</tr></tbody></table>
+</div>
+
+
+
+
+
+
+
+
+</div>
+</div>
+<div id="editor_text_banner">
+<div id="editor_text_banner_fr" style="display:none" lang="fr">
+<div style="font-weight:bold; font-size:1.2em; color:#64696C">Bienvenue sur le portail captif de l'Université du Havre</div>
+</div>
+<div id="editor_text_banner_de" style="display:none" lang="de">
+<div style="font-weight:bold; font-size:2em; color:#64696C">Willkommen</div>
+</div>
+<div id="editor_text_banner_en" style="" lang="en">
+<div style="font-weight:bold; font-size:2em; color:#64696C">Welcome</div>
+</div>
+<div id="editor_text_banner_es" style="display:none" lang="es">
+<div style="font-weight:bold; font-size:2em; color:#64696C">Bienvenido</div>
+</div>
+<div id="editor_text_banner_it" style="display:none" lang="it">
+<div style="font-weight:bold; font-size:2em; color:#64696C">Benvenuto</div>
+</div>
+<div id="editor_text_banner_nl" style="display:none" lang="nl">
+<div style="font-weight:bold; font-size:2em; color:#64696C">Welkom</div>
+</div>
+<div id="editor_text_banner_pt" style="display:none" lang="pt">
+<div style="font-weight:bold; font-size:2em; color:#64696C">Bem-vindo(a)</div>
+</div>
+<div id="editor_text_banner_pl" style="display:none" lang="pl">
+<div style="font-weight:bold; font-size:2em; color:#64696C">Witaj</div>
+</div>
+<div id="editor_text_banner_zh_CN" style="display:none" lang="zh_CN">
+<div style="font-weight:bold; font-size:2em; color:#64696C">欢迎光临</div>
+</div>
+<div id="editor_text_banner_ar" style="display:none" lang="ar">
+<div style="font-weight:bold; font-size:2em; color:#64696C; width:100%; text-align:left">مرحباً</div>
+</div>
+<div id="editor_text_banner_ko" style="display:none" lang="ko">
+<div style="font-weight:bold; font-size:2em; color:#64696C">환영합니다</div>
+</div>
+<div id="editor_text_banner_ja" style="display:none" lang="ja">
+<div style="font-weight:bold; font-size:2em; color:#64696C">ようこそ</div>
+</div>
+<div id="editor_text_banner_th" style="display:none" lang="th">
+<div style="font-weight:bold; font-size:2em; color:#64696C">ยินดีต้อนรับ</div>
+</div>
+<div id="editor_text_banner_ru" style="display:none" lang="ru">
+<div style="font-weight:bold; font-size:2em; color:#64696C">Добро пожаловать</div>
+</div>
+<div id="editor_text_banner_id" style="display:none" lang="id">
+<div style="font-weight:bold; font-size:2em; color:#64696C">Selamat datang</div>
+</div>
+<div id="editor_text_banner_zh_TW" style="display:none" lang="zh_TW">
+&nbsp;
+</div>
+</div>
+<div id="editor_text_charte">
+<div id="editor_text_charte_fr" style="display:none" lang="fr">
+<a href="https://www.univ-lehavre.fr/spip.php?article768">Charte Informatique</a>
+</div>
+<div id="editor_text_charte_de" style="display:none" lang="de">
+&nbsp;
+</div>
+<div id="editor_text_charte_en" style="" lang="en">
+&nbsp;
+</div>
+<div id="editor_text_charte_es" style="display:none" lang="es">
+&nbsp;
+</div>
+<div id="editor_text_charte_it" style="display:none" lang="it">
+&nbsp;
+</div>
+<div id="editor_text_charte_nl" style="display:none" lang="nl">
+&nbsp;
+</div>
+<div id="editor_text_charte_pt" style="display:none" lang="pt">
+&nbsp;
+</div>
+<div id="editor_text_charte_pl" style="display:none" lang="pl">
+&nbsp;
+</div>
+<div id="editor_text_charte_zh_CN" style="display:none" lang="zh_CN">
+&nbsp;
+</div>
+<div id="editor_text_charte_ar" style="display:none" lang="ar">
+&nbsp;
+</div>
+<div id="editor_text_charte_ko" style="display:none" lang="ko">
+&nbsp;
+</div>
+<div id="editor_text_charte_ja" style="display:none" lang="ja">
+&nbsp;
+</div>
+<div id="editor_text_charte_th" style="display:none" lang="th">
+&nbsp;
+</div>
+<div id="editor_text_charte_ru" style="display:none" lang="ru">
+&nbsp;
+</div>
+<div id="editor_text_charte_id" style="display:none" lang="id">
+&nbsp;
+</div>
+</div>
+<div id="editor_img_logo"><img src="index_files/logoulh.png" alt="" width="191" height="103"></div>
+</div>
+<div id="footer">
+	<!-- The footer template -->
+	<!-- Will be added on bottom of the page -->
+	&nbsp;
+</div>
+</div>
+
+
+</body></html>
